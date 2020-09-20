@@ -1,0 +1,29 @@
+﻿using UnityEngine;
+
+[CreateAssetMenu(menuName ="Skills/Explosion Data")]
+public class ExplosionData : ScriptableObject
+{
+    [Range(0, 5)] public int explosionRadiusLevel = 0;
+    public float explosionRadius = 2f;
+    private float defaultRadius = 2f;
+
+    [Space]
+    [Range(0, 5)] public int explosionForceLevel = 0;
+    public float explosionForce = 50f;
+    private float defaultExplosionForce = 50f;
+
+    [Space]
+    [Range(0, 5)] public int explosionTimeoutLevel = 0;
+    public float explosionTimeout = 3f;
+    private float defaultTimeout = 3f;
+
+
+    public void UpdateExplosionLevels()
+    {
+        explosionRadius = defaultRadius + 0.4f * explosionRadiusLevel;
+
+        explosionForce = defaultExplosionForce + 10f * explosionForceLevel;
+
+        explosionTimeout = defaultTimeout - 0.5f * explosionTimeoutLevel;
+    }
+}
