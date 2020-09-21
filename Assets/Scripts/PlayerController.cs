@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     [Space]
     public Button JumpButton;
 
+    private Vector3 direction;
+
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -78,7 +80,7 @@ public class PlayerController : MonoBehaviour
             verticalInput = joystick.Vertical;
         }
 
-        Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+        direction = new Vector3(horizontalInput, 0f, verticalInput).normalized;
 
         if(direction.magnitude < 0.1f)
         {
@@ -91,21 +93,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             rigidbody.AddForce(direction * maxSpeed, ForceMode.Force);
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
-
-        if (Input.GetButtonDown("Fire2"))
-        {
-            Shoot();
-        }
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Explode();
         }
     }
 
@@ -136,7 +123,11 @@ public class PlayerController : MonoBehaviour
             isShooting = true;
             aSource.PlayOneShot(shootSound);
             shootingTimer = shootData.shootTimeout;
-            rigidbody.AddForce(Vector3.forward * shootData.shootForce, ForceMode.Impulse);
+            if(direction.magnitude > 0)
+            {
+                rigidbody.AddForce(Vector3.forward * shootData.shootForce + direction, ForceMode.Impulse);
+            }
+
             shootParticles.transform.position = transform.position;
             shootParticles.Play();
         }

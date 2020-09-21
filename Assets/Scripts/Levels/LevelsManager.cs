@@ -42,9 +42,13 @@ public class LevelsManager : ScriptableObject
 
     public void GoToLevel(int levelIndex)
     {
-        if (levels[levelIndex].unlocked)
+        if(levels.Count > levelIndex)
         {
-            SceneManager.LoadSceneAsync(levels[levelIndex].sceneIndex);
+            if (levels[levelIndex].unlocked)
+            {
+                currentLevel = levelIndex;
+                GoToCurrentLevel();
+            }
         }
     }
 
