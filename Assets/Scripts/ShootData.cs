@@ -4,12 +4,12 @@
 public class ShootData : ScriptableObject
 {
     [Range(0, 5)] public int shootForceLevel = 0;
-    [Min(20f)] public float shootForce = 0f;
+    [Min(20f)] public float shootForce = 20f;
     private float defaultShootForce = 20f;
 
     [Space]
     [Range(0, 5)] public int shootTimeoutLevel = 0;
-    [Min(1.6f)] public float shootTimeout = 0f;
+    [Min(1.6f)] public float shootTimeout = 1.6f;
     private float defaultTimeout = 1.6f;
 
     private void Start()

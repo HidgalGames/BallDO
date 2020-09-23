@@ -18,7 +18,6 @@ public class LevelsManager : ScriptableObject
                 currentLevel++;
             }
         }
-
     }
 
     public void ChangeCurrentLevel(int levelNumber)

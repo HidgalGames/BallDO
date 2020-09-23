@@ -327,8 +327,9 @@ GameObject:
   - component: {fileID: 2759987354301473143}
   - component: {fileID: 2759987354301473146}
   - component: {fileID: 2759987354301473141}
-  - component: {fileID: 2759987354301473142}
+  - component: {fileID: 3613474431337154901}
   - component: {fileID: 6311527444641577454}
+  - component: {fileID: 1479722844}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -378,17 +379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df193579b9feb2f4a8136c57a8ebd7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
   camTransform: {fileID: 0}
-  explosion: {fileID: 3592288569954009214}
-  maxSpeed: 3.5
-  accelerationSpeed: 6
+  explosionRadius: {fileID: 3592288569954009214}
   shootSound: {fileID: 8300000, guid: a238769ce63632141bcbf83dda3b93f7, type: 3}
   explodeSound: {fileID: 8300000, guid: 9a5baef16508c6d49af0919f66778b5e, type: 3}
-  jumpSound: {fileID: 8300000, guid: a644d2e95453c964c8013020589ed76b, type: 3}
-  isGrounded: 0
-  jumpForce: 4
-  JumpParicles: {fileID: 0}
   explosionParticles: {fileID: 8225230848965805973}
   explosionLight: {fileID: 8135252856938124279}
   explosionData: {fileID: 11400000, guid: f99e8e81e693b39408bc8875a31544c4, type: 2}
@@ -396,23 +390,28 @@ MonoBehaviour:
   shootData: {fileID: 11400000, guid: 874c3db92ffd50d48ae7b10dc5134b59, type: 2}
   isShooting: 0
   shootingTimer: 0
-  JumpButton: {fileID: 0}
---- !u!54 &2759987354301473142
-Rigidbody:
+--- !u!114 &3613474431337154901
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2759987354301473147}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8ea9f5777d09a40b63a25303603a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
+  maxSpeed: 15
+  accelerationTime: 0.5
+  stoppingTime: 5
+  currentSpeed: 0
+  direction: {x: 0, y: 0, z: 0}
+  JumpButton: {fileID: 0}
+  jumpForce: 4
+  JumpParicles: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: a644d2e95453c964c8013020589ed76b, type: 3}
 --- !u!82 &6311527444641577454
 AudioSource:
   m_ObjectHideFlags: 0
@@ -433,7 +432,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.4921775
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -469,7 +468,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -509,6 +508,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &1479722844
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2759987354301473147}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &2759987355016585668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,7 +1128,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8541312114221296253}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1129,7 +1144,7 @@ Transform:
   - {fileID: 2759987355017475653}
   m_Father: {fileID: 2759987354301473143}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!1001 &8135123131588233463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1214,7 +1229,7 @@ PrefabInstance:
     - target: {fileID: 114970998950348076, guid: 46876a2780737ec45a19d62f88e5ce56,
         type: 3}
       propertyPath: autodestruct
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198194127032045410, guid: 46876a2780737ec45a19d62f88e5ce56,
         type: 3}
@@ -1288,15 +1303,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
---- !u!1 &8135252856938124279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1119560965430016, guid: 46876a2780737ec45a19d62f88e5ce56,
-    type: 3}
-  m_PrefabInstance: {fileID: 8135123131588233463}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &8225230848965805973 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198194127032045410, guid: 46876a2780737ec45a19d62f88e5ce56,
+    type: 3}
+  m_PrefabInstance: {fileID: 8135123131588233463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8135252856938124279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1119560965430016, guid: 46876a2780737ec45a19d62f88e5ce56,
     type: 3}
   m_PrefabInstance: {fileID: 8135123131588233463}
   m_PrefabAsset: {fileID: 0}

@@ -10,7 +10,10 @@ public class Level : ScriptableObject
 
     public void SetRating(int rate)
     {
-        rating = rate;
+        if(rate > rating)
+        {
+            rating = rate;
+        }
     }
 
     public void Unlock()

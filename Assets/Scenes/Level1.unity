@@ -1110,6 +1110,7 @@ GameObject:
   - component: {fileID: 395485768}
   - component: {fileID: 395485767}
   - component: {fileID: 395485769}
+  - component: {fileID: 395485770}
   m_Layer: 0
   m_Name: Fall Out Trigger
   m_TagString: FallOutTrigger
@@ -1158,6 +1159,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPoint: {fileID: 1939733695}
   lvlPoints: {fileID: 1009263544}
+--- !u!54 &395485770
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395485766}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &399932854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1243,7 +1260,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2323843313481598533}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1217057563}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42844a4fccbd54746b90cade4ff70f73, type: 3}
@@ -2505,6 +2522,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180179881}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1217057563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1577271304758393361, guid: dc1c6f453755ec149900d0c3e571f02d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2323843313481598533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1217057564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217057563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1479722846}
+          m_MethodName: OnJoystickMove
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1479722846}
+          m_MethodName: OnJoystickStop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1289681225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,6 +3027,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2104166307}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479722846 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3613474431337154901, guid: a36dc4c0eabb5ca408f92a552ab03c53,
+    type: 3}
+  m_PrefabInstance: {fileID: 2759987353686709055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8ea9f5777d09a40b63a25303603a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1489932680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,8 +3618,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.07310501, y: -0.00000003432068, z: 0.0000000025157454, w: 0.9973243}
-  m_LocalPosition: {x: -1.889, y: 2.393, z: -10.84}
+  m_LocalRotation: {x: 0.07310501, y: 0.000000034320685, z: -0.0000000025157454, w: 0.9973243}
+  m_LocalPosition: {x: -1.889, y: 2.595, z: -10.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4340,7 +4418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003463844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.889, y: 2.393, z: -10.84}
+  m_LocalPosition: {x: -1.889, y: 2.595, z: -10.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1408128871}
@@ -4786,7 +4864,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106673998}
-  m_LocalRotation: {x: 0.073105, y: -0.000000017160337, z: 0.0000000012578723, w: 0.9973243}
+  m_LocalRotation: {x: 0.073105, y: 0.000000017160344, z: -0.0000000012578728, w: 0.9973243}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5006,7 +5084,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 614773322}
+      objectReference: {fileID: 1479722846}
     - target: {fileID: 2323843313002794264, guid: dc1c6f453755ec149900d0c3e571f02d,
         type: 3}
       propertyPath: m_BlockingObjects
@@ -5223,6 +5301,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToNextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 9144019825372183332, guid: dc1c6f453755ec149900d0c3e571f02d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.599976
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc1c6f453755ec149900d0c3e571f02d, type: 3}
 --- !u!114 &2323843313481598534 stripped
@@ -5270,40 +5353,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2759987354301473141, guid: a36dc4c0eabb5ca408f92a552ab03c53,
         type: 3}
-      propertyPath: joystick
-      value: 
-      objectReference: {fileID: 459350603}
-    - target: {fileID: 2759987354301473141, guid: a36dc4c0eabb5ca408f92a552ab03c53,
-        type: 3}
       propertyPath: camTransform
       value: 
       objectReference: {fileID: 1687258585}
     - target: {fileID: 2759987354301473141, guid: a36dc4c0eabb5ca408f92a552ab03c53,
         type: 3}
-      propertyPath: JumpParicles
-      value: 
-      objectReference: {fileID: 399932855}
-    - target: {fileID: 2759987354301473141, guid: a36dc4c0eabb5ca408f92a552ab03c53,
-        type: 3}
       propertyPath: shootParticles
       value: 
       objectReference: {fileID: 2036951841}
-    - target: {fileID: 2759987354301473141, guid: a36dc4c0eabb5ca408f92a552ab03c53,
-        type: 3}
-      propertyPath: shootData
-      value: 
-      objectReference: {fileID: 11400000, guid: 874c3db92ffd50d48ae7b10dc5134b59,
-        type: 2}
-    - target: {fileID: 2759987354301473141, guid: a36dc4c0eabb5ca408f92a552ab03c53,
-        type: 3}
-      propertyPath: JumpButton
-      value: 
-      objectReference: {fileID: 489300806}
-    - target: {fileID: 2759987354301473141, guid: a36dc4c0eabb5ca408f92a552ab03c53,
-        type: 3}
-      propertyPath: accelerationSpeed
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 2759987354301473143, guid: a36dc4c0eabb5ca408f92a552ab03c53,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5312,7 +5369,7 @@ PrefabInstance:
     - target: {fileID: 2759987354301473143, guid: a36dc4c0eabb5ca408f92a552ab03c53,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.863
+      value: 1.065
       objectReference: {fileID: 0}
     - target: {fileID: 2759987354301473143, guid: a36dc4c0eabb5ca408f92a552ab03c53,
         type: 3}
@@ -5364,16 +5421,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6311527444641577454, guid: a36dc4c0eabb5ca408f92a552ab03c53,
+    - target: {fileID: 3613474431337154901, guid: a36dc4c0eabb5ca408f92a552ab03c53,
         type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8177893576958086619, guid: a36dc4c0eabb5ca408f92a552ab03c53,
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 459350603}
+    - target: {fileID: 3613474431337154901, guid: a36dc4c0eabb5ca408f92a552ab03c53,
         type: 3}
-      propertyPath: autodestruct
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: JumpButton
+      value: 
+      objectReference: {fileID: 489300806}
+    - target: {fileID: 3613474431337154901, guid: a36dc4c0eabb5ca408f92a552ab03c53,
+        type: 3}
+      propertyPath: JumpParicles
+      value: 
+      objectReference: {fileID: 399932855}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a36dc4c0eabb5ca408f92a552ab03c53, type: 3}
 --- !u!1001 &6838962174797699031
