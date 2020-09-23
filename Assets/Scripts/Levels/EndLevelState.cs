@@ -101,10 +101,11 @@ public class EndLevelState : MonoBehaviour
 
         lvlManager.RateCurrentLevel(rate);
         EndLvlMenu.DrawRating(rate);
-        upgradePoints.Add(upgradePointsToAdd);
 
         if (rate > 0)
         {
+            lvlManager.GetUpgradeCoinsFromCurrentLevel(upgradePointsToAdd);
+            upgradePoints.Add(upgradePointsToAdd);
             soundManager.PlayLevelCompleted();
             lvlManager.UnlockNextLevel();
             EndLvlMenu.completeText.text = "LEVEL COMPLETED!";

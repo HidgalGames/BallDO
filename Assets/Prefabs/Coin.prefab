@@ -111,7 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AddPoints: 1
-  pointsObject: {fileID: 11400000, guid: 324ad2796c1a619488d59ff9e3cd0d68, type: 2}
   coinSound: {fileID: 8300000, guid: 723c44a99732dbf4197a08076ebf7393, type: 3}
   particles: {fileID: 317721545628890247}
 --- !u!82 &6838962175551127266

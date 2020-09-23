@@ -51,6 +51,11 @@ public class LevelsManager : ScriptableObject
         }
     }
 
+    public void GetUpgradeCoinsFromCurrentLevel(int coinsCount)
+    {
+        levels[currentLevel].GetUpgradeCoins(coinsCount);
+    }
+
     public void UnlockNextLevel()
     {
         if(currentLevel < levels.Count - 1)

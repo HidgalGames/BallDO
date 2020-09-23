@@ -7,6 +7,7 @@ public class Level : ScriptableObject
     public int rating = 0;
     public string sceneIndex;
     public bool unlocked = false;
+    [Min(0)] public int upgradeCoinsCount = 0;
 
     public void SetRating(int rate)
     {
@@ -14,6 +15,11 @@ public class Level : ScriptableObject
         {
             rating = rate;
         }
+    }
+
+    public void GetUpgradeCoins(int coinsCount)
+    {
+        upgradeCoinsCount-= coinsCount;
     }
 
     public void Unlock()
