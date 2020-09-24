@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0986009ee65a5a742b668b6ea2fd6994
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SkinButtonPrefab: {fileID: 5784897648930932198, guid: 8a063e5f9be23c94c84da1309a4feddf,
+      type: 3}
+  - listParentTransform: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

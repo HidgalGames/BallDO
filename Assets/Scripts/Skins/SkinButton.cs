@@ -1,18 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class SkinButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private SkinsMenu skinsMenu;
+    public Button skinButton;
+
+    public Image skinImage;
+    public TextMeshProUGUI skinName;
+
+    private int skinNumber = 0;
+
+    public void SetupButton(Skin skin, int number, SkinsMenu menu)
     {
-        
+        skinImage.sprite = skin.skinIcon;
+        skinName.text = skin.skinName;
+        skinNumber = number;
+        skinButton.interactable = !skin.locked;
+        skinsMenu = menu;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeSkin()
     {
-        
+        skinsMenu.ChangeSkin(skinNumber);
     }
 }

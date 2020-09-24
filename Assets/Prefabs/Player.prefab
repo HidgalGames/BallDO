@@ -223,7 +223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinsList: {fileID: 11400000, guid: 9bb58de190b2eb14aa2f698cd115e87b, type: 2}
-  currentSkinNumber: 0
   SkinParent: {fileID: 920861209758763034}
   joystick: {fileID: 0}
 --- !u!1 &3592288569954009214

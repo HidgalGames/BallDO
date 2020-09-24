@@ -4,22 +4,19 @@ using UnityEngine.UI;
 public class SkinSystem : MonoBehaviour
 {
     public SkinsList skinsList;
-    [Min(0)] public int currentSkinNumber = 0;
     public Transform SkinParent;
     public Image joystick;
 
     private void Start()
     {
-        ChangeSkin(currentSkinNumber);
+        ChangeSkin(skinsList.currentSkin);
     }
 
     public void ChangeSkin(int skinNumber)
     {
-        if (skinNumber < skinsList.playerSkins.Length)
+        if (skinsList.ChangeSkin(skinNumber))
         {
-            currentSkinNumber = skinNumber;
-
-            Skin curSkin = skinsList.playerSkins[currentSkinNumber];
+            Skin curSkin = skinsList.playerSkins[skinsList.currentSkin];
 
             if (SkinParent.childCount > 0)
             {
