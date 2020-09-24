@@ -9,4 +9,5 @@ public class Skin : ScriptableObject
     public Sprite skinIcon;
     public Sprite joyIcon;
     public bool locked = true;
+    public int cost = 1000;
 }

@@ -2861,7 +2861,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408128869}
-  m_LocalRotation: {x: 0.09123374, y: -0.000000013000802, z: 0.0000000011910791, w: 0.9958295}
+  m_LocalRotation: {x: 0.09123372, y: 0.000000001968168, z: -1.8031521e-10, w: 0.9958295}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5437,6 +5437,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1687258583}
+    - target: {fileID: 9075846037832031954, guid: dc1c6f453755ec149900d0c3e571f02d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc1c6f453755ec149900d0c3e571f02d, type: 3}
 --- !u!114 &2323843313481598534 stripped
