@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EndLevelState : MonoBehaviour
@@ -31,7 +32,7 @@ public class EndLevelState : MonoBehaviour
         if (!waitForEndAffect && endLevelTriggered)
         {
             endLevelTriggered = false;
-            EndLevel();
+            StartCoroutine(EndLevel());
         }
     }
 
@@ -40,6 +41,14 @@ public class EndLevelState : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             endLevelTriggered = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            endLevelTriggered = false;
         }
     }
 
@@ -70,8 +79,10 @@ public class EndLevelState : MonoBehaviour
         upgradePointsToAdd += points;
     }
 
-    private void EndLevel()
+    IEnumerator EndLevel()
     {
+        yield return new WaitForSeconds(1);
+
         float percent = (float) lvlPoints.LevelPoints / (float) (enemiesCount * 10);
 
         if (percent >= 0.8f)
@@ -117,5 +128,7 @@ public class EndLevelState : MonoBehaviour
         }
 
         UIController.GoToEndLevelMenu(rate > 0);
+
+        yield return null;
     }
 }

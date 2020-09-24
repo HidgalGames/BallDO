@@ -5,6 +5,7 @@ public class ManGUIFunctions : MonoBehaviour
     public GameObject MainMenuObject;
     public GameObject LevelsListMenuObject;
     public GameObject SkillsMenuObject;
+    public GameObject SettingsMenuObject;
     public GameObject SkinsMenuObject;
 
     private GameObject currentMenu;
@@ -32,6 +33,11 @@ public class ManGUIFunctions : MonoBehaviour
     public void GoToSninsMenu()
     {
         GoToMenu(SkinsMenuObject);
+    }
+
+    public void GoToSettingsMenu()
+    {
+        GoToMenu(SettingsMenuObject);
     }
 
     private void GoToMenu(GameObject menu)
