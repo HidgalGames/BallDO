@@ -3649,7 +3649,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.07310501, y: -0.00000003432068, z: 0.0000000025157454, w: 0.9973243}
+  m_LocalRotation: {x: 0.07310501, y: 0.000000034320685, z: -0.0000000025157454, w: 0.9973243}
   m_LocalPosition: {x: -1.889, y: 2.595, z: -10.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4908,7 +4908,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106673998}
-  m_LocalRotation: {x: 0.073105, y: -0.000000017160337, z: 0.0000000012578723, w: 0.9973243}
+  m_LocalRotation: {x: 0.073105, y: 0.000000017160344, z: -0.0000000012578728, w: 0.9973243}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5107,6 +5107,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1479722846}
+    - target: {fileID: 1577271304758393362, guid: dc1c6f453755ec149900d0c3e571f02d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2323843311758959240, guid: dc1c6f453755ec149900d0c3e571f02d,
         type: 3}
       propertyPath: musicToggle
@@ -5395,6 +5400,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2323843313481598537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1577271304437810285, guid: dc1c6f453755ec149900d0c3e571f02d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2323843313481598533}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2759987353686709055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5472,6 +5489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2967255442796231165, guid: a36dc4c0eabb5ca408f92a552ab03c53,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 2323843313481598537}
     - target: {fileID: 3613474431337154901, guid: a36dc4c0eabb5ca408f92a552ab03c53,
         type: 3}
       propertyPath: joystick
