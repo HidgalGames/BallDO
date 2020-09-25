@@ -35,6 +35,13 @@ public class ManGUIFunctions : MonoBehaviour
         coinsText.text = coins.ToString();
     }
 
+    /*
+    public void UpdateDonateCoins(int coins)
+    {
+        donateCoinsText.text = coins.ToString();
+    }
+    */
+
     public void GoToMain()
     {
         coinsObject.SetActive(true);

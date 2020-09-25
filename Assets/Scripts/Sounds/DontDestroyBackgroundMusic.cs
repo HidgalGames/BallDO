@@ -3,6 +3,7 @@
 public class DontDestroyBackgroundMusic : MonoBehaviour
 {
     private static DontDestroyBackgroundMusic instance;
+    public SoundSettings soundSettings;
 
     private void Start()
     {
@@ -15,5 +16,7 @@ public class DontDestroyBackgroundMusic : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this);
         }
+
+        soundSettings.UpdateValues();
     }
 }

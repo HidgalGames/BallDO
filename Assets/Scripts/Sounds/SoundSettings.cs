@@ -1,17 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
-public class SoundSettings : MonoBehaviour
+[CreateAssetMenu(menuName = "Sound Settings")]
+public class SoundSettings : ScriptableObject
 {
     public AudioMixerGroup mixer;
     public bool soundEnabled = true;
     public bool musicEnabled = true;
-
-    private void Start()
-    {
-        UpdateMusicValue();
-        UpdateSoundValue();
-    }
 
     public void ToggleMusic(bool enabled)
     {
@@ -22,6 +17,12 @@ public class SoundSettings : MonoBehaviour
     public void ToggleSound(bool enabled)
     {
         soundEnabled = enabled;
+        UpdateSoundValue();
+    }
+
+    public void UpdateValues()
+    {
+        UpdateMusicValue();
         UpdateSoundValue();
     }
 

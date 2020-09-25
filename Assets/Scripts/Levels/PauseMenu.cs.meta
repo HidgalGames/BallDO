@@ -4,9 +4,12 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - soundSettings: {fileID: 11400000, guid: d957b5650e64d7d4984e387d92ed976f, type: 2}
+  - soundSettings: {fileID: 11400000, guid: af56fcfd2ba736340a4d876a4e0cc482, type: 2}
   - soundToggle: {instanceID: 0}
   - musicToggle: {instanceID: 0}
+  - lvlNameText: {instanceID: 0}
+  - highscoreText: {instanceID: 0}
+  - lvlManager: {fileID: 11400000, guid: 648ff69b3085a3644a8891f976b1a7f7, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

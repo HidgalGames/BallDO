@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47078b87cf51bd0438dab31107f296b6, type: 3}
+  m_Name: Global Variables
+  m_EditorClassIdentifier: 
+  playerCoins: {fileID: 11400000, guid: cb3120bad79dfd24494c6efebc98dcef, type: 2}
+  playerDonatecoins: {fileID: 11400000, guid: 04533e0cd2134fa45b3f0ee314b82ec2, type: 2}
+  upgradeCoins: {fileID: 11400000, guid: 324ad2796c1a619488d59ff9e3cd0d68, type: 2}
+  explData: {fileID: 11400000, guid: f99e8e81e693b39408bc8875a31544c4, type: 2}
+  shData: {fileID: 11400000, guid: 874c3db92ffd50d48ae7b10dc5134b59, type: 2}
+  skins: {fileID: 11400000, guid: 9bb58de190b2eb14aa2f698cd115e87b, type: 2}
+  lvlManager: {fileID: 11400000, guid: 648ff69b3085a3644a8891f976b1a7f7, type: 2}
+  soundSettings: {fileID: 11400000, guid: af56fcfd2ba736340a4d876a4e0cc482, type: 2}

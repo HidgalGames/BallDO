@@ -22,7 +22,7 @@ public class SkinButton : MonoBehaviour
 
         if (skin.locked)
         {
-            skinCost.text = skin.cost.ToString() + "$";
+            skinCost.text = skin.cost.ToString();
             buyButton.interactable = true;
         }
         else
@@ -42,7 +42,7 @@ public class SkinButton : MonoBehaviour
         {
             buyButton.gameObject.SetActive(false);
             skinButton.interactable = true;
-            skinCost.text = string.Empty;
+            skinCost.gameObject.SetActive(false);
         }
     }
 

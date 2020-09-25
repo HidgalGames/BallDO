@@ -9,11 +9,14 @@ public class EndLevelMenu : MonoBehaviour
     public TextMeshProUGUI coinsText;
 
     private int currentLvlRating = 0;
+    private int lvlCoins = 0;
+    private int currentCoins = 0;
 
     private void OnEnable()
     {
         Time.timeScale = 0;
         StartCoroutine(DrawRating());
+        StartCoroutine(DrawCoins());
     }
 
     private void OnDestroy()
@@ -27,12 +30,28 @@ public class EndLevelMenu : MonoBehaviour
         currentLvlRating = rating;
     }
 
-    private IEnumerator DrawRating()
+    public void SetCoins(int coins)
+    {
+        lvlCoins = coins;
+    }
+
+    IEnumerator DrawRating()
     {
         for (int i = 0; i < currentLvlRating; i++)
         {
+            yield return new WaitForSecondsRealtime(0.2f);
             lvlRatingText.text += "* ";
-            yield return new WaitForSeconds(0.5f);
         }
+    }
+
+    IEnumerator DrawCoins()
+    {
+        while(currentCoins <= lvlCoins)
+        {
+            yield return new WaitForEndOfFrame();
+            coinsText.text = "+" + currentCoins.ToString();
+            currentCoins++;
+        }
+
     }
 }

@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa7b26d7ffd10b40979e93de9d1a932, type: 3}
-  m_Name: Coins
+  m_Script: {fileID: 11500000, guid: a1b022114689c4e4f9547cd907639d61, type: 3}
+  m_Name: Sound Settings
   m_EditorClassIdentifier: 
-  TotalCoins: 600
+  mixer: {fileID: 24300002, guid: b58a40ef851243f4887655dfdaae4e1b, type: 2}
+  soundEnabled: 1
+  musicEnabled: 1

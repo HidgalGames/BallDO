@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
-    private SoundSettings soundSettings;
+    public SoundSettings soundSettings;
     public Toggle soundToggle;
     public Toggle musicToggle;
 
+    [Space]
+    public TextMeshProUGUI lvlNameText;
+    public TextMeshProUGUI highscoreText;
+    public LevelsManager lvlManager;
+
     private void Start()
     {
-        soundSettings = FindObjectOfType<SoundSettings>();
         soundToggle.isOn = !soundSettings.soundEnabled;
         musicToggle.isOn = !soundSettings.musicEnabled;
+        lvlNameText.text = "LVL " + (lvlManager.currentLevel + 1).ToString();
+        highscoreText.text = "HIGHSCORE: " + lvlManager.levels[lvlManager.currentLevel].rating;
     }
 
     public void ToggleMusic()

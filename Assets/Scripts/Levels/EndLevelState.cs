@@ -112,6 +112,8 @@ public class EndLevelState : MonoBehaviour
             rate = 0;
         }
 
+        int delta = rate - lvlManager.levels[lvlManager.currentLevel].rating;
+
         lvlManager.RateCurrentLevel(rate);
         EndLvlMenu.SetRating(rate);
 
@@ -122,7 +124,12 @@ public class EndLevelState : MonoBehaviour
             soundManager.PlayLevelCompleted();
             lvlManager.UnlockNextLevel();
             EndLvlMenu.completeText.text = "LEVEL COMPLETED!";
-            playerCoins.AddCoins(rate * 100);
+
+            if (delta > 0)
+            {
+                playerCoins.AddCoins(delta * 100);
+                EndLvlMenu.SetCoins(delta * 100);
+            }
         }
         else
         {

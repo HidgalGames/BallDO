@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa7b26d7ffd10b40979e93de9d1a932, type: 3}
-  m_Name: Coins
+  m_Script: {fileID: 11500000, guid: 0ef5e17820890bd48ba17eff5494decd, type: 3}
+  m_Name: Donate Coins
   m_EditorClassIdentifier: 
-  TotalCoins: 600
+  TotalCoins: 0
