@@ -6,7 +6,7 @@ public class SkinButton : MonoBehaviour
 {
     private SkinsMenu skinsMenu;
     public Button skinButton;
-    public Button unlockButton;
+    public Button buyButton;
 
     public Image skinImage;
     public TextMeshProUGUI skinName;
@@ -23,11 +23,11 @@ public class SkinButton : MonoBehaviour
         if (skin.locked)
         {
             skinCost.text = skin.cost.ToString() + "$";
-            unlockButton.interactable = true;
+            buyButton.interactable = true;
         }
         else
         {
-            unlockButton.gameObject.SetActive(false);
+            buyButton.gameObject.SetActive(false);
             skinCost.text = string.Empty;
         }
 
@@ -38,10 +38,9 @@ public class SkinButton : MonoBehaviour
 
     public void BuySkin()
     {
-        //skinsMenu.ButSkin(skinnumber);
-        if (true)
+        if (skinsMenu.BuySkin(skinNumber))
         {
-            unlockButton.gameObject.SetActive(false);
+            buyButton.gameObject.SetActive(false);
             skinButton.interactable = true;
             skinCost.text = string.Empty;
         }

@@ -8,6 +8,9 @@ public class SkinsMenu : MonoBehaviour
     private SkinSystem skinSystem;
 
     [Space]
+    public Coins playerCoins;
+
+    [Space]
     public Transform listParentTransform;
 
     [Space]
@@ -33,6 +36,22 @@ public class SkinsMenu : MonoBehaviour
             buttonTrans.anchoredPosition = new Vector2(160f + 290f * i, -20f);
             button.SetupButton(skins[i], i, this);
         }
+    }
+
+    public bool BuySkin(int skinNumber)
+    {
+        Skin curSkin;
+        if (skinNumber < skinSystem.skinsList.playerSkins.Length)
+        {
+            curSkin = skinSystem.skinsList.playerSkins[skinNumber];
+            if (playerCoins.TakeCoins(curSkin.cost))
+            {
+                curSkin.locked = false;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void ChangeSkin(int skinNumber)

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class UpgradeCoin : MonoBehaviour
 {
     public int AddPoints = 1;
     private EndLevelState endLevel;

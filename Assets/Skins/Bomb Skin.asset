@@ -15,6 +15,7 @@ MonoBehaviour:
   skinName: Bomb
   skinObject: {fileID: 6988712906219327404, guid: 1ff2e59244666194cbff45749d6ae301,
     type: 3}
-  skinIcon: {fileID: 21300000, guid: f1ccb921cd5e6604d87befd7133fd9f4, type: 3}
-  joyIcon: {fileID: 21300000, guid: 1623f4de5c741504390891d63e5d1e28, type: 3}
+  skinIcon: {fileID: 21300000, guid: 685db2bb0d234d7449efb932d1df3990, type: 3}
+  joyIcon: {fileID: 21300000, guid: 16c1444882499f44d8732fb0a3793585, type: 3}
   locked: 1
+  cost: 1000

@@ -3,7 +3,14 @@ guid: dd693b51366b43f4ebce5177d7a1fd1b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - soundManager: {instanceID: 0}
+  - upgradePoints: {fileID: 11400000, guid: 324ad2796c1a619488d59ff9e3cd0d68, type: 2}
+  - UIController: {instanceID: 0}
+  - EndLvlMenu: {instanceID: 0}
+  - lvlManager: {instanceID: 0}
+  - lvlPoints: {instanceID: 0}
+  - playerCoins: {fileID: 11400000, guid: cb3120bad79dfd24494c6efebc98dcef, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -21,6 +21,8 @@ public class EndLevelState : MonoBehaviour
     private bool waitForEndAffect = false;
     private bool endLevelTriggered = false;
 
+    public Coins playerCoins;
+
     private int rate = 0;
 
     private int upgradePointsToAdd = 0;
@@ -111,7 +113,7 @@ public class EndLevelState : MonoBehaviour
         }
 
         lvlManager.RateCurrentLevel(rate);
-        EndLvlMenu.DrawRating(rate);
+        EndLvlMenu.SetRating(rate);
 
         if (rate > 0)
         {
@@ -120,6 +122,7 @@ public class EndLevelState : MonoBehaviour
             soundManager.PlayLevelCompleted();
             lvlManager.UnlockNextLevel();
             EndLvlMenu.completeText.text = "LEVEL COMPLETED!";
+            playerCoins.AddCoins(rate * 100);
         }
         else
         {

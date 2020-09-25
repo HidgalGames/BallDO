@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class ManGUIFunctions : MonoBehaviour
 {
@@ -10,13 +11,33 @@ public class ManGUIFunctions : MonoBehaviour
 
     private GameObject currentMenu;
 
+    [Space]
+    public GameObject coinsObject;
+    private TextMeshProUGUI coinsText;
+    public Coins playerCoins;
+
     private void Start()
     {
+        SetupCoinsObjects();
+
         GoToMain();
+    }
+
+    private void SetupCoinsObjects()
+    {
+        playerCoins.SetupGUI(this);
+        coinsText = coinsObject.GetComponentInChildren<TextMeshProUGUI>();
+        coinsText.text = playerCoins.TotalCoins.ToString();
+    }
+
+    public void UpdateCoins(int coins)
+    {
+        coinsText.text = coins.ToString();
     }
 
     public void GoToMain()
     {
+        coinsObject.SetActive(true);
         GoToMenu(MainMenuObject);
     }
 
@@ -27,16 +48,18 @@ public class ManGUIFunctions : MonoBehaviour
 
     public void GoToSkillsMenu()
     {
+        coinsObject.SetActive(false);
         GoToMenu(SkillsMenuObject);
     }
 
-    public void GoToSninsMenu()
+    public void GoToSkinsMenu()
     {
         GoToMenu(SkinsMenuObject);
     }
 
     public void GoToSettingsMenu()
     {
+        coinsObject.SetActive(false);
         GoToMenu(SettingsMenuObject);
     }
 

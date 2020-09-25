@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - SkinButtonPrefab: {fileID: 5784897648930932198, guid: 8a063e5f9be23c94c84da1309a4feddf,
       type: 3}
+  - playerCoins: {fileID: 11400000, guid: cb3120bad79dfd24494c6efebc98dcef, type: 2}
   - listParentTransform: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

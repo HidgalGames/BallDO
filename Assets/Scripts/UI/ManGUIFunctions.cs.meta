@@ -3,7 +3,14 @@ guid: 0f7f4cbe480f9fe4d95b1ee75099f34f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - MainMenuObject: {instanceID: 0}
+  - LevelsListMenuObject: {instanceID: 0}
+  - SkillsMenuObject: {instanceID: 0}
+  - SettingsMenuObject: {instanceID: 0}
+  - SkinsMenuObject: {instanceID: 0}
+  - coinsObject: {instanceID: 0}
+  - playerCoins: {fileID: 11400000, guid: cb3120bad79dfd24494c6efebc98dcef, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
