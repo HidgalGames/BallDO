@@ -27,8 +27,7 @@ public class SkinButton : MonoBehaviour
         }
         else
         {
-            buyButton.gameObject.SetActive(false);
-            skinCost.text = string.Empty;
+            ActivateButton();
         }
 
         skinNumber = number;
@@ -40,14 +39,19 @@ public class SkinButton : MonoBehaviour
     {
         if (skinsMenu.BuySkin(skinNumber))
         {
-            buyButton.gameObject.SetActive(false);
-            skinButton.interactable = true;
-            skinCost.gameObject.SetActive(false);
+            ActivateButton();
         }
     }
 
     public void ChangeSkin()
     {
         skinsMenu.ChangeSkin(skinNumber);
+    }
+
+    private void ActivateButton()
+    {
+        buyButton.gameObject.SetActive(false);
+        skinButton.interactable = true;
+        skinCost.gameObject.SetActive(false);
     }
 }
