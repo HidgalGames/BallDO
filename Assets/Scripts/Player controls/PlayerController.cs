@@ -42,9 +42,14 @@ public class PlayerController : MonoBehaviour
         if (explosionTimer > 0f)
         {
             explosionTimer -= delta;
-            if(explosionTimer <= 0f)
+            if(explosionData.explosionTimeout - explosionTimer >= 0.5f)
             {
                 SetExplosionObjects(false);
+            }
+
+            if(explosionTimer <= 0f)
+            {
+                isExploding = false;
             }
         }
 
@@ -67,13 +72,13 @@ public class PlayerController : MonoBehaviour
             SetExplosionObjects(true);
             explosionParticles.Play();
             explosionTimer = explosionData.explosionTimeout;
+            isExploding = true;
         }
     }
 
     private void SetExplosionObjects(bool isActive)
-    {
-        isExploding = isActive;
-        explosionRadius.transform.localScale *= explosionData.explosionRadius;
+    {        
+        explosionRadius.transform.localScale = Vector3.one * explosionData.explosionRadius;
         explosionRadius.SetActive(isActive);
         explosionLight.SetActive(isActive);
     }

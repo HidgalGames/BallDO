@@ -125,7 +125,7 @@ public class EndLevelState : MonoBehaviour
             lvlManager.UnlockNextLevel();
             EndLvlMenu.completeText.text = "LEVEL COMPLETED!";
 
-            if (delta > 0)
+            if (delta >= 0)
             {
                 playerCoins.AddCoins(delta * 100);
                 EndLvlMenu.SetCoins(delta * 100);

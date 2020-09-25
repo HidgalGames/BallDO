@@ -46,12 +46,11 @@ public class EndLevelMenu : MonoBehaviour
 
     IEnumerator DrawCoins()
     {
-        while(currentCoins <= lvlCoins)
+        while (currentCoins <= lvlCoins + 1)
         {
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSecondsRealtime(0.001f);
             coinsText.text = "+" + currentCoins.ToString();
-            currentCoins++;
-        }
-
+            currentCoins += 3;
+        }        
     }
 }

@@ -34,10 +34,12 @@ public class PlayerData
     public int currentLvl;
     public int[,] levelsStats; //[номер уровня, рейтинг, статус (1 - заблокирован, 0 - разблокирован), кол-во upgrade coins]
 
-
     [Header("Sounds")]
     public bool soundsEnabled;
     public bool musicEnabled;
+
+    [Header("Etc")]
+    public bool firstStart = true;
 
     public PlayerData(GlobalVariables variables)
     {
@@ -97,5 +99,7 @@ public class PlayerData
 
         soundsEnabled = variables.soundSettings.soundEnabled;
         musicEnabled = variables.soundSettings.musicEnabled;
+
+        firstStart = variables.firstStart;
     }
 }

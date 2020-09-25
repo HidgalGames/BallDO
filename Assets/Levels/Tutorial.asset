@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b0d00de3acaf754fbe1968170932c61, type: 3}
-  m_Name: Level2
+  m_Name: Tutorial
   m_EditorClassIdentifier: 
   rating: 0
-  sceneIndex: Level2
-  unlocked: 0
+  sceneIndex: Tutorial
+  unlocked: 1
+  upgradeCoinsCount: 1

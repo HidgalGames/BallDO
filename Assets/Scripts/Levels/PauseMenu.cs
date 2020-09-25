@@ -17,8 +17,15 @@ public class PauseMenu : MonoBehaviour
     {
         soundToggle.isOn = !soundSettings.soundEnabled;
         musicToggle.isOn = !soundSettings.musicEnabled;
-        lvlNameText.text = "LVL " + (lvlManager.currentLevel + 1).ToString();
-        highscoreText.text = "HIGHSCORE: " + lvlManager.levels[lvlManager.currentLevel].rating;
+        if(lvlManager.currentLevel > 0)
+        {
+            lvlNameText.text = "LVL " + (lvlManager.currentLevel + 1).ToString();
+            highscoreText.text = "HIGHSCORE: " + lvlManager.levels[lvlManager.currentLevel].rating;
+        }
+        else
+        {
+            lvlNameText.text = "TUTORIAL";
+        }
     }
 
     public void ToggleMusic()

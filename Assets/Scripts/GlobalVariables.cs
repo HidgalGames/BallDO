@@ -21,6 +21,9 @@ public class GlobalVariables : ScriptableObject
     [Header("Sounds")]
     public SoundSettings soundSettings;
 
+    [Header("Etc")]
+    public bool firstStart = true;
+
     public void LoadVariables(PlayerData data)
     {
         playerCoins.TotalCoins = data.coinsCount;
@@ -58,5 +61,7 @@ public class GlobalVariables : ScriptableObject
 
         soundSettings.soundEnabled = data.soundsEnabled;
         soundSettings.musicEnabled = data.musicEnabled;
+
+        firstStart = data.firstStart;
     }
 }

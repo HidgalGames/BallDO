@@ -3,11 +3,16 @@ using TMPro;
 
 public class ManGUIFunctions : MonoBehaviour
 {
+    public GlobalVariables variables;
+
     public GameObject MainMenuObject;
     public GameObject LevelsListMenuObject;
     public GameObject SkillsMenuObject;
     public GameObject SettingsMenuObject;
     public GameObject SkinsMenuObject;
+
+    [Space]
+    public GameObject tutorialScreenObject;
 
     private GameObject currentMenu;
 
@@ -16,11 +21,22 @@ public class ManGUIFunctions : MonoBehaviour
     private TextMeshProUGUI coinsText;
     public Coins playerCoins;
 
+    [Space]
+    public GameObject donateCoinsObject;
+    private TextMeshProUGUI donateCoinsText;
+    public DonateCoins donateCoins;
+
     private void Start()
     {
         SetupCoinsObjects();
 
         GoToMain();
+
+        if (variables.firstStart)
+        {
+            tutorialScreenObject.SetActive(true);
+            variables.firstStart = false;
+        }
     }
 
     private void SetupCoinsObjects()
@@ -28,23 +44,26 @@ public class ManGUIFunctions : MonoBehaviour
         playerCoins.SetupGUI(this);
         coinsText = coinsObject.GetComponentInChildren<TextMeshProUGUI>();
         coinsText.text = playerCoins.TotalCoins.ToString();
+
+        donateCoins.SetupGUI(this);
+        donateCoinsText = donateCoinsObject.GetComponentInChildren<TextMeshProUGUI>();
+        donateCoinsText.text = donateCoins.TotalCoins.ToString();
     }
 
     public void UpdateCoins(int coins)
     {
         coinsText.text = coins.ToString();
     }
-
-    /*
+    
     public void UpdateDonateCoins(int coins)
     {
-        donateCoinsText.text = coins.ToString();
-    }
-    */
+        donateCoinsText.text = donateCoins.ToString();
+    }    
 
     public void GoToMain()
     {
         coinsObject.SetActive(true);
+        donateCoinsObject.SetActive(true);
         GoToMenu(MainMenuObject);
     }
 
@@ -67,6 +86,7 @@ public class ManGUIFunctions : MonoBehaviour
     public void GoToSettingsMenu()
     {
         coinsObject.SetActive(false);
+        donateCoinsObject.SetActive(false);
         GoToMenu(SettingsMenuObject);
     }
 

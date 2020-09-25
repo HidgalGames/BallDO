@@ -20,6 +20,12 @@ public class LevelsManager : ScriptableObject
         }
     }
 
+    public void GoTutorial()
+    {
+        currentLevel = 0;
+        SceneManager.LoadSceneAsync(levels[0].sceneIndex);
+    }
+
     public void ChangeCurrentLevel(int levelNumber)
     {
         currentLevel = levelNumber;

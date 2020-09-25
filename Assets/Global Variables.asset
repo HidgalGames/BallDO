@@ -20,3 +20,4 @@ MonoBehaviour:
   skins: {fileID: 11400000, guid: 9bb58de190b2eb14aa2f698cd115e87b, type: 2}
   lvlManager: {fileID: 11400000, guid: 648ff69b3085a3644a8891f976b1a7f7, type: 2}
   soundSettings: {fileID: 11400000, guid: af56fcfd2ba736340a4d876a4e0cc482, type: 2}
+  firstStart: 1

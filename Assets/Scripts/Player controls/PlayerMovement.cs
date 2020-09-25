@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Space]
     public Button JumpButton;
-    public float jumpForce = 4f;
+    public float jumpForce = 4.7f;
     public ParticleSystem JumpParicles;
     public AudioClip jumpSound;
 
@@ -49,12 +49,14 @@ public class PlayerMovement : MonoBehaviour
     public void OnJoystickMove()
     {
         float horizontal = joystick.Horizontal;
-        float vertical = 0f;
+        float vertical = joystick.Vertical;
 
+        /*
         if (isGrounded)
         {
             vertical = joystick.Vertical;
         }
+        */
 
         direction = new Vector3(horizontal, 0f, vertical).normalized;
 
