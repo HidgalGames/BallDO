@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7629ad235f43ef44eb1e6de3f05b3ae0, type: 3}
   m_Name: Upgrade Points
   m_EditorClassIdentifier: 
-  Value: 8
+  Value: 0
