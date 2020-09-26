@@ -19,10 +19,39 @@ public class ShootData : ScriptableObject
 
     public void UpdateShootLevels()
     {
-
         shootForce = defaultShootForce + 5f * shootForceLevel;
 
         shootTimeout = defaultTimeout - 0.2f * shootTimeoutLevel;
+    }
+
+    public int GetLevel(SkillType type)
+    {
+        switch (type)
+        {
+            case SkillType.shootForce:
+                return shootForceLevel;
+
+            case SkillType.shootTimeout:
+                return shootTimeoutLevel;
+        }
+
+        return -1;
+    }
+
+    public void SetLevel(SkillType type, int level)
+    {
+        switch (type)
+        {
+            case SkillType.shootForce:
+                shootForceLevel = level;
+                break;
+
+            case SkillType.shootTimeout:
+                shootTimeoutLevel = level;
+                break;
+        }
+
+        UpdateShootLevels();
     }
 
 #if UNITY_EDITOR

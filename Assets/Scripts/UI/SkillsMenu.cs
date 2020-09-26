@@ -5,6 +5,15 @@ using TMPro;
 
 public class SkillsMenu : MonoBehaviour
 {
+    [SerializeField] public enum UpgradeType
+    {
+        explosionForce,
+        explosionRadius,
+        explosionTimeout,
+        shootForce,
+        shootTimeout
+    }
+
     [Header("Skills Datas")]
     public ExplosionData explosionData;
     public ShootData shootData;
@@ -27,16 +36,57 @@ public class SkillsMenu : MonoBehaviour
     public List<GameObject> ShootTimeoutLevelPicks;
 
     [Space]
-    public List<Button> UpgradeButtons;
+    public Button[] UpgradeButtons;
+    public Button[] MinusButtons;
 
     [Space]
     public TextMeshProUGUI pointsText;
     public UpgradePointsObject UpgradePoints;
 
+    private bool eForceChanged = false;
+    private bool eRadiusChanged = false;
+    private bool eTimeoutChanged = false;
+
+    private bool sForceChanged = false;
+    private bool sTimeoutChanged = false;
+
+
     private void OnEnable()
     {
         ActivateLevelPicks();
         CheckForUpgradePoints();
+    }
+
+    private void ActivateLevelPicks()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if (i < explosionData.explosionForceLevel)
+            {
+                ExplosionForceLevelPicks[i].SetActive(true);
+            }
+
+            if (i < explosionData.explosionRadiusLevel)
+            {
+                ExplosionRadiusLevelPicks[i].SetActive(true);
+            }
+
+            if (i < explosionData.explosionTimeoutLevel)
+            {
+                ExplosionTimeoutLevelPicks[i].SetActive(true);
+            }
+
+
+            if (i < shootData.shootForceLevel)
+            {
+                ShootForceLevelPicks[i].SetActive(true);
+            }
+
+            if (i < shootData.shootTimeoutLevel)
+            {
+                ShootTimeoutLevelPicks[i].SetActive(true);
+            }
+        }
     }
 
     private void OnDisable()
@@ -69,6 +119,90 @@ public class SkillsMenu : MonoBehaviour
 
         UpdatePointsText();
     }
+
+    public void ApplyChanges()
+    {
+        explosionData.explosionForceLevel += explosionForceDelta;
+        explosionData.explosionRadiusLevel += explosionRadiusDelta;
+        explosionData.explosionTimeoutLevel += explosionTimeoutDelta;
+
+        shootData.shootForceLevel += shootForceDelta;
+        shootData.shootTimeoutLevel += shootTimeoutDelta;
+
+        explosionData.UpdateExplosionLevels();
+        shootData.UpdateShootLevels();
+
+        explosionForceDelta = 0;
+        explosionRadiusDelta = 0;
+        explosionTimeoutDelta = 0;
+        shootForceDelta = 0;
+        shootTimeoutDelta = 0;
+
+        if (UpgradePoints.Value > 0)
+        {
+            CheckAllAppliedButtons();
+        }
+        else
+        {
+            SetUpgradeButtons(false);
+        }
+
+    }
+
+    private void TakeUpgradePoint()
+    {
+        UpgradePoints.Take(1);
+
+        UpdatePointsText();
+
+        if (UpgradePoints.Value == 0)
+        {
+            SetUpgradeButtons(false);
+        }
+    }
+
+    public void LevelUpSkill(UpgradeType type)
+    {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void LevelUpExplosionForce()
     {
@@ -190,78 +324,7 @@ public class SkillsMenu : MonoBehaviour
         CheckUpgradeButtonsByStringNumber(4);
     }
 
-    public void ApplyChanges()
-    {
-        explosionData.explosionForceLevel += explosionForceDelta;
-        explosionData.explosionRadiusLevel += explosionRadiusDelta;
-        explosionData.explosionTimeoutLevel += explosionTimeoutDelta;
 
-        shootData.shootForceLevel += shootForceDelta;
-        shootData.shootTimeoutLevel += shootTimeoutDelta;
-
-        explosionData.UpdateExplosionLevels();
-        shootData.UpdateShootLevels();
-
-        explosionForceDelta = 0;
-        explosionRadiusDelta = 0;
-        explosionTimeoutDelta = 0;
-        shootForceDelta = 0;
-        shootTimeoutDelta = 0;
-
-        if(UpgradePoints.Value > 0)
-        {
-            CheckAllAppliedButtons();
-        }
-        else
-        {
-            SetUpgradeButtons(false);
-        }
-
-    }
-
-    private void TakeUpgradePoint()
-    {
-        UpgradePoints.Take(1);
-
-        UpdatePointsText();
-
-        if (UpgradePoints.Value == 0)
-        {
-            SetUpgradeButtons(false);
-        }
-    }
-
-    private void ActivateLevelPicks()
-    {
-        for(int i = 0; i < 5; i++)
-        {
-            if(i < explosionData.explosionForceLevel)
-            {
-                ExplosionForceLevelPicks[i].SetActive(true);
-            }
-
-            if (i < explosionData.explosionRadiusLevel)
-            {
-                ExplosionRadiusLevelPicks[i].SetActive(true);
-            }
-
-            if (i < explosionData.explosionTimeoutLevel)
-            {
-                ExplosionTimeoutLevelPicks[i].SetActive(true);
-            }
-
-            
-            if(i < shootData.shootForceLevel)
-            {
-                ShootForceLevelPicks[i].SetActive(true);
-            }
-
-            if (i < shootData.shootTimeoutLevel)
-            {
-                ShootTimeoutLevelPicks[i].SetActive(true);
-            }
-        }
-    }
 
     private void CheckUpgradeButtonsByStringNumber(int stringNumber)
     {
@@ -367,10 +430,9 @@ public class SkillsMenu : MonoBehaviour
 
     private void SetUpgradeButtons(bool isActive)
     {
-        for(int i = 0; i < UpgradeButtons.Count; i++)
+        for(int i = 0; i < UpgradeButtons.Length; i++)
         {
             UpgradeButtons[i].interactable = isActive;
         }
-
     }
 }
