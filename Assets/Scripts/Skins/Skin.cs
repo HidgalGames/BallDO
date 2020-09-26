@@ -10,4 +10,14 @@ public class Skin : ScriptableObject
     public Sprite joyIcon;
     public bool locked = true;
     public int cost = 1000;
+
+#if UNITY_EDITOR
+    [Header("Defaults")]
+    public bool defaultLockState = true;
+
+    public void RestoreToDefaults()
+    {
+        locked = defaultLockState;
+    }
+#endif
 }

@@ -50,7 +50,13 @@ public class EndLevelMenu : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.001f);
             coinsText.text = "+" + currentCoins.ToString();
-            currentCoins += 3;
+            currentCoins += 9;
         }        
+
+        if(currentCoins != lvlCoins)
+        {
+            currentCoins = lvlCoins;
+            coinsText.text = "+" + currentCoins.ToString();
+        }
     }
 }

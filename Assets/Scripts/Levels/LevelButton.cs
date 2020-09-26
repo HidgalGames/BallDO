@@ -38,7 +38,7 @@ public class LevelButton : MonoBehaviour
             UnlockButton();
         }
 
-        buttonName.text = "LVL " + (lvlNumber + 1).ToString();
+        buttonName.text = "LVL " + lvlNumber.ToString();
         lvlRatingText.text = string.Empty;
         DrawRating();
     }

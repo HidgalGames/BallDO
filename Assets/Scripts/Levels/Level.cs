@@ -9,6 +9,19 @@ public class Level : ScriptableObject
     public bool unlocked = false;
     [Min(0)] public int upgradeCoinsCount = 0;
 
+#if UNITY_EDITOR
+    [Header("Defaults")]
+    [Min(0)] public int defaultCoinsCount = 0;
+    public bool defaultLockState = false;
+
+    public void RestoreToDefaults()
+    {
+        rating = 0;
+        unlocked = defaultLockState;
+        upgradeCoinsCount = defaultCoinsCount;
+    }
+#endif
+
     public void SetRating(int rate)
     {
         if(rate > rating)

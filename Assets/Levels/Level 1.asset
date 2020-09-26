@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0d00de3acaf754fbe1968170932c61, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  rating: 5
-  sceneIndex: Level1
+  rating: 0
+  sceneIndex: Level 1
   unlocked: 1
-  upgradeCoinsCount: 0
+  upgradeCoinsCount: 2
+  defaultCoinsCount: 2
+  defaultLockState: 1

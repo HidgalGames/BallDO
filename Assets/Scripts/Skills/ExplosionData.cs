@@ -25,4 +25,18 @@ public class ExplosionData : ScriptableObject
 
         explosionTimeout = defaultTimeout - 0.5f * explosionTimeoutLevel;
     }
+
+#if UNITY_EDITOR
+    public void RestoreToDefaults()
+    {
+        explosionRadiusLevel = 0;
+        explosionRadius = defaultRadius;
+
+        explosionForceLevel = 0;
+        explosionForce = defaultExplosionForce;
+
+        explosionTimeoutLevel = 0;
+        explosionTimeout = defaultTimeout;
+    }
+#endif
 }

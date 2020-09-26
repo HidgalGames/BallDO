@@ -1,8 +1,18 @@
 ﻿using UnityEngine;
 
+#if UNITY_EDITOR
+using System.IO;
+using BasicTools.ButtonInspector;
+#endif
+
 [CreateAssetMenu(menuName = "Global Variables")]
 public class GlobalVariables : ScriptableObject
 {
+#if UNITY_EDITOR
+    [Button("Restore to Defaults", "RestoreToDefaults")]
+    public bool restoreButton = false;
+#endif
+
     [Header("Coins")]
     public Coins playerCoins;
     public DonateCoins playerDonatecoins;
@@ -64,4 +74,32 @@ public class GlobalVariables : ScriptableObject
 
         firstStart = data.firstStart;
     }
+
+#if UNITY_EDITOR
+    public void RestoreToDefaults()
+    {
+        string filePath = Application.persistentDataPath + "/data.bds";
+        if (File.Exists(filePath))
+        {
+            File.Delete(filePath);
+        }
+
+            playerCoins.TotalCoins = 0;
+        playerDonatecoins.TotalCoins = 0;
+        upgradeCoins.Value = 0;
+
+        explData.RestoreToDefaults();
+        shData.RestoreToDefaults();
+
+        skins.RestoreSkins();
+
+        lvlManager.RestoreLevelsToDefault();
+
+        soundSettings.RestoreToDefaults();
+
+        firstStart = true;
+
+        Debug.Log("Restored to defaults");
+    }
+#endif
 }

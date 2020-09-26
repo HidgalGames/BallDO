@@ -362,7 +362,7 @@ public class SkillsMenu : MonoBehaviour
 
     private void UpdatePointsText()
     {
-        pointsText.text = "Upgrade Coins: " + UpgradePoints.Value.ToString();
+        pointsText.text = UpgradePoints.Value.ToString();
     }
 
     private void SetUpgradeButtons(bool isActive)

@@ -19,3 +19,4 @@ MonoBehaviour:
   joyIcon: {fileID: 21300000, guid: 16c1444882499f44d8732fb0a3793585, type: 3}
   locked: 1
   cost: 1000
+  defaultLockState: 1

@@ -16,4 +16,16 @@ public class SkinsList : ScriptableObject
 
         return false;
     }
+
+#if UNITY_EDITOR
+    public void RestoreSkins()
+    {
+        currentSkin = 0;
+
+        foreach(Skin sk in playerSkins)
+        {
+            sk.RestoreToDefaults();
+        }
+    }
+#endif
 }

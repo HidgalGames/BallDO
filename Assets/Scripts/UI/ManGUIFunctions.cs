@@ -57,7 +57,7 @@ public class ManGUIFunctions : MonoBehaviour
     
     public void UpdateDonateCoins(int coins)
     {
-        donateCoinsText.text = donateCoins.ToString();
+        donateCoinsText.text = coins.ToString();
     }    
 
     public void GoToMain()

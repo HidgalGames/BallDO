@@ -49,4 +49,12 @@ public class SoundSettings : ScriptableObject
             mixer.audioMixer.SetFloat("SoundVolume", -80f);
         }
     }
+
+#if UNITY_EDITOR
+    public void RestoreToDefaults()
+    {
+        soundEnabled = true;
+        musicEnabled = true;
+    }
+#endif
 }

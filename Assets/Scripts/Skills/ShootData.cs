@@ -24,4 +24,15 @@ public class ShootData : ScriptableObject
 
         shootTimeout = defaultTimeout - 0.2f * shootTimeoutLevel;
     }
+
+#if UNITY_EDITOR
+    public void RestoreToDefaults()
+    {
+        shootForceLevel = 0;
+        shootForce = defaultShootForce;
+
+        shootTimeoutLevel = 0;
+        shootTimeout = defaultTimeout;
+    }
+#endif
 }

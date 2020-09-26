@@ -7,18 +7,7 @@ public class LevelsManager : ScriptableObject
 {
     public List<Level> levels;
 
-    [Min(0)] public int currentLevel = 0;
-
-    public void RaiseCurrentLevelNumber()
-    {
-        if(currentLevel < levels.Count - 1)
-        {
-            if (levels[currentLevel + 1].unlocked && levels[currentLevel].rating > 0)
-            {
-                currentLevel++;
-            }
-        }
-    }
+    [Min(0)] public int currentLevel = 1;
 
     public void GoTutorial()
     {
@@ -26,9 +15,18 @@ public class LevelsManager : ScriptableObject
         SceneManager.LoadSceneAsync(levels[0].sceneIndex);
     }
 
-    public void ChangeCurrentLevel(int levelNumber)
+    public bool ChangeCurrentLevel(int levelIndex)
     {
-        currentLevel = levelNumber;
+        if (levelIndex < levels.Count)
+        {
+            if (levels[levelIndex].unlocked)
+            {
+                currentLevel = levelIndex;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void GoToCurrentLevel()
@@ -38,22 +36,17 @@ public class LevelsManager : ScriptableObject
 
     public void GoToNextLevel()
     {
-        if(currentLevel + 1 < levels.Count - 1)
+        if (ChangeCurrentLevel(currentLevel + 1))
         {
-            currentLevel++;
             GoToCurrentLevel();
         }
     }
 
     public void GoToLevel(int levelIndex)
     {
-        if(levels.Count > levelIndex)
+        if (ChangeCurrentLevel(levelIndex))
         {
-            if (levels[levelIndex].unlocked)
-            {
-                currentLevel = levelIndex;
-                GoToCurrentLevel();
-            }
+            GoToCurrentLevel();
         }
     }
 
@@ -74,4 +67,16 @@ public class LevelsManager : ScriptableObject
     {
         levels[currentLevel].SetRating(rate);
     }
+
+#if UNITY_EDITOR
+    public void RestoreLevelsToDefault()
+    {
+        currentLevel = 1;
+
+        foreach (Level lvl in levels)
+        {
+            lvl.RestoreToDefaults();
+        }
+    }
+#endif
 }

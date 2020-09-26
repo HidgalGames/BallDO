@@ -17,7 +17,7 @@ public class DonateCoins : ScriptableObject
         TotalCoins += addCoins;
         if (guiCoins)
         {
-            guiCoins.UpdateCoins(TotalCoins);
+            guiCoins.UpdateDonateCoins(TotalCoins);
         }
     }
 
@@ -29,7 +29,7 @@ public class DonateCoins : ScriptableObject
 
             if (guiCoins)
             {
-                guiCoins.UpdateCoins(TotalCoins);
+                guiCoins.UpdateDonateCoins(TotalCoins);
             }
 
             return true;

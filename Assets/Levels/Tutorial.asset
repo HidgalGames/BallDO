@@ -16,3 +16,5 @@ MonoBehaviour:
   sceneIndex: Tutorial
   unlocked: 1
   upgradeCoinsCount: 1
+  defaultCoinsCount: 1
+  defaultLockState: 1
