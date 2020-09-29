@@ -778,10 +778,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 305034fc-e043-4113-a9bc-fd4cd968a5a0
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: BallDO!
-  organizationId: ej-games-25caf3ef-8f08-4ca2-b14a-4ec2405ba3f3
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
