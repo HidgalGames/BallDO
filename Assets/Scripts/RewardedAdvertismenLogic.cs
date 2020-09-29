@@ -57,7 +57,7 @@ public class RewardedAdvertismenLogic : MonoBehaviour, IUnityAdsListener
 
     public void OnUnityAdsDidStart(string placementId)
     {
-        throw new System.NotImplementedException();
+        return;
     }
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)

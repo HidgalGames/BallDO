@@ -186,13 +186,6 @@ public class CoinsExchanger : MonoBehaviour
     {
         slider.interactable = isActive;
 
-        if (isActive)
-        {            
-            slider.minValue = 1;
-        }
-        else
-        {
-            slider.minValue = 0;
-        }
+        slider.minValue = 0;
     }
 }
