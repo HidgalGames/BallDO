@@ -11,6 +11,7 @@ public class LevelButton : MonoBehaviour
     public Image additiveImage;
     public Color unlockedColorAdditive;
     public Color lockedColorAdditive;
+    public GameObject UCIndicator;
 
     [Space]
     public int levelNubmber = 0;
@@ -26,7 +27,7 @@ public class LevelButton : MonoBehaviour
         sManager = Camera.main.gameObject.GetComponent<SoundManager>();
     }
 
-    public void SetupButton(int lvlNumber, int lvlRating, bool unlocked, LevelsManager lvlMng)
+    public void SetupButton(int lvlNumber, int lvlRating, bool unlocked, int UCCount, LevelsManager lvlMng)
     {
         SetupLvlManager(lvlMng);
         levelNubmber = lvlNumber;
@@ -41,6 +42,8 @@ public class LevelButton : MonoBehaviour
         buttonName.text = "LVL " + lvlNumber.ToString();
         lvlRatingText.text = string.Empty;
         DrawRating();
+
+        UCIndicator.SetActive(UCCount > 0);
     }
 
     public void ChangeRating(int rating)

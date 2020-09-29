@@ -32,4 +32,8 @@ public class SkinSystem : MonoBehaviour
         }
     }
 
+    public int GetCurrentSkinNumber()
+    {
+        return skinsList.currentSkin;
+    }
 }

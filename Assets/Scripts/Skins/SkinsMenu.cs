@@ -35,6 +35,7 @@ public class SkinsMenu : MonoBehaviour
             RectTransform buttonTrans = button.GetComponent<RectTransform>();
             buttonTrans.anchoredPosition = new Vector2(160f + 290f * i, -20f);
             button.SetupButton(skins[i], i, this);
+            buttons.Add(button);
         }
     }
 
@@ -56,10 +57,17 @@ public class SkinsMenu : MonoBehaviour
 
     public void ChangeSkin(int skinNumber)
     {
+        buttons[skinSystem.GetCurrentSkinNumber()].SetChoosedCondition(false);
+
         if(skinSystem != null)
         {
             skinSystem.ChangeSkin(skinNumber);
         }
+    }
+
+    public int getCurSkinNumber()
+    {
+        return skinSystem.GetCurrentSkinNumber();
     }
 
 }

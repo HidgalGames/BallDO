@@ -21,12 +21,24 @@ public class SkillsMenuLogic : MonoBehaviour
     [Space]
     public TextMeshProUGUI pointsText;
     public UpgradePointsObject UpgradePoints;
+    private int UCDelta = 0;
+
+    private void Start()
+    {
+        UpgradePoints.SetupGUI(this);
+    }
 
     private void OnEnable()
     {
         FillLevels();
         ActivateLevelIndicators();
         CheckForUpgradePoints();
+    }
+
+    private void OnDisable()
+    {
+        UpgradePoints.Add(UCDelta);
+        UCDelta = 0;
     }
 
     private void ActivateLevelIndicators()
@@ -42,6 +54,7 @@ public class SkillsMenuLogic : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             skillsDeltas[i] = 0;
+            skillsLevels[i] = 0;
             UpdateLevelInformation((SkillType) i);
         }
     }
@@ -58,7 +71,7 @@ public class SkillsMenuLogic : MonoBehaviour
         }
     }
 
-    private void CheckForUpgradePoints()
+    public void CheckForUpgradePoints()
     {
         SetAllButtons(ButtonType.Both, false);
         UpdateUpgradePointsText();
@@ -68,7 +81,7 @@ public class SkillsMenuLogic : MonoBehaviour
         }
     }
 
-    private void UpdateUpgradePointsText()
+    public void UpdateUpgradePointsText()
     {
         pointsText.text = UpgradePoints.Value.ToString();
     }
@@ -106,7 +119,7 @@ public class SkillsMenuLogic : MonoBehaviour
         switch (buttonType)
         {
             case ButtonType.UpgradeButton:
-                return skillsLevels[(int) skillType] + skillsDeltas[(int) skillType] < 5;
+                return ((skillsLevels[(int) skillType] + skillsDeltas[(int) skillType] < 5) && UpgradePoints.Value > 0);
 
             case ButtonType.MinusButton:
                 return skillsDeltas[(int) skillType] > 0;
@@ -123,25 +136,25 @@ public class SkillsMenuLogic : MonoBehaviour
                 if(skillsDeltas[(int) skill] < 5)
                 {                    
                     skillsDeltas[(int) skill]++;
-                    Debug.Log("Upgrade " + skill + " " + skillsDeltas[(int) skill]);
                     indicators[(int) skill].AddIndicator();
                     UpgradePoints.Take(1);
+                    UCDelta++;
                 }
                 break;
 
             case ButtonType.MinusButton:
                 if(skillsDeltas[(int) skill] > 0)
                 {
-                    Debug.Log("Minus " + skill);
                     skillsDeltas[(int) skill]--;
                     indicators[(int) skill].RemoveIndicator();
                     UpgradePoints.Add(1);
+                    UCDelta--;
                 }
                 break;
         }
 
         UpdateUpgradePointsText();
-        UpgradeButtons[(int) skill].interactable = IsButtonShouldBeActive(ButtonType.UpgradeButton, skill);
+        SetAllButtons(ButtonType.UpgradeButton, true);
         MinusButtons[(int) skill].interactable = IsButtonShouldBeActive(ButtonType.MinusButton, skill);
     }
 
@@ -170,5 +183,7 @@ public class SkillsMenuLogic : MonoBehaviour
 
             MinusButtons[i].interactable = IsButtonShouldBeActive(ButtonType.MinusButton, (SkillType) i);
         }
+
+        UCDelta = 0;
     }
 }

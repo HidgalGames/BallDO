@@ -45,7 +45,7 @@ public class LevelsListMenu : MonoBehaviour
                 LevelButton button = bgo.GetComponent<LevelButton>();
                 RectTransform buttonTransform = button.gameObject.GetComponent<RectTransform>();
                 buttonTransform.anchoredPosition += new Vector2(256 * (j - 1), -256 * i);
-                button.SetupButton(i + j, lvlManager.levels[i + j].rating, lvlManager.levels[i + j].unlocked, lvlManager);
+                button.SetupButton(i + j, lvlManager.levels[i + j].rating, lvlManager.levels[i + j].unlocked, lvlManager.levels[i + j].upgradeCoinsCount, lvlManager);
                 buttons.Add(button);
             }
         }

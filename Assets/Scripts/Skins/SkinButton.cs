@@ -12,6 +12,9 @@ public class SkinButton : MonoBehaviour
     public TextMeshProUGUI skinName;
     public TextMeshProUGUI skinCost;
 
+    public GameObject choosedIndicator;
+    public bool isChoosed = false;
+
     private int skinNumber = 0;
 
     public void SetupButton(Skin skin, int number, SkinsMenu menu)
@@ -33,6 +36,8 @@ public class SkinButton : MonoBehaviour
         skinNumber = number;
 
         skinsMenu = menu;
+
+        SetChoosedCondition(skinsMenu.getCurSkinNumber() == skinNumber);
     }
 
     public void BuySkin()
@@ -46,6 +51,7 @@ public class SkinButton : MonoBehaviour
     public void ChangeSkin()
     {
         skinsMenu.ChangeSkin(skinNumber);
+        SetChoosedCondition(true);
     }
 
     private void ActivateButton()
@@ -53,5 +59,11 @@ public class SkinButton : MonoBehaviour
         buyButton.gameObject.SetActive(false);
         skinButton.interactable = true;
         skinCost.gameObject.SetActive(false);
+    }
+
+    public void SetChoosedCondition(bool choosed)
+    {
+        isChoosed = choosed;
+        choosedIndicator.SetActive(isChoosed);
     }
 }
