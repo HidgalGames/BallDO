@@ -94,7 +94,7 @@ MonoBehaviour:
   currentSpeed: 0
   direction: {x: 0, y: 0, z: 0}
   JumpButton: {fileID: 0}
-  jumpForce: 4
+  jumpForce: 5.5
   JumpParicles: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: a644d2e95453c964c8013020589ed76b, type: 3}
 --- !u!82 &6311527444641577454

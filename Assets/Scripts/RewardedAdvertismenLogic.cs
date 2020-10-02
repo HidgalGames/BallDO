@@ -13,6 +13,8 @@ public class RewardedAdvertismenLogic : MonoBehaviour, IUnityAdsListener
     public int coinsToAdd = 200;
     public TextMeshProUGUI coinsTooltip;
 
+    public GameObject loadingIcon;
+
     private void Start()
     {
         adsButton.interactable = false;
@@ -23,6 +25,11 @@ public class RewardedAdvertismenLogic : MonoBehaviour, IUnityAdsListener
             Advertisement.AddListener(this);
             Advertisement.Initialize(gameID, testMode);
         }        
+    }
+
+    public void OnEnable()
+    {
+        loadingIcon.SetActive(!Advertisement.IsReady(myPlacementId));
     }
 
     public void ShowRewardedAd()
@@ -46,6 +53,7 @@ public class RewardedAdvertismenLogic : MonoBehaviour, IUnityAdsListener
     {
         if (placementId == myPlacementId)
         {
+            loadingIcon.SetActive(false);
             adsButton.interactable = true;
         }
     }

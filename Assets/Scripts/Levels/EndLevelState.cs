@@ -17,6 +17,9 @@ public class EndLevelState : MonoBehaviour
     public int enemiesCount = 0;
 
     [Space]
+    public ParticleSystem[] endLevelPatricles;
+
+    [Space]
     [SerializeField] private List<Enemy> affectedEnemies;
     private bool waitForEndAffect = false;
     private bool endLevelTriggered = false;
@@ -83,7 +86,11 @@ public class EndLevelState : MonoBehaviour
 
     IEnumerator EndLevel()
     {
-        yield return new WaitForSeconds(1);
+        foreach(ParticleSystem p in endLevelPatricles)
+        {
+            p.Play();
+        }
+        yield return new WaitForSeconds(0.4f);
 
         float percent = (float) lvlPoints.LevelPoints / (float) (enemiesCount * 10);
 

@@ -15,4 +15,6 @@ MonoBehaviour:
   rating: 0
   sceneIndex: Level 2
   unlocked: 0
-  upgradeCoinsCount: 0
+  upgradeCoinsCount: 1
+  defaultCoinsCount: 1
+  defaultLockState: 0

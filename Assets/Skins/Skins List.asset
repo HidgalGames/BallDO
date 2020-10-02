@@ -15,4 +15,5 @@ MonoBehaviour:
   playerSkins:
   - {fileID: 11400000, guid: 9e5c992cfd2fa7241ba828a722fc6a07, type: 2}
   - {fileID: 11400000, guid: f3a5e3c5d2dae6243965f72960496100, type: 2}
+  - {fileID: 11400000, guid: 962e5e29ef0d706429e752c237ea6bfb, type: 2}
   currentSkin: 0

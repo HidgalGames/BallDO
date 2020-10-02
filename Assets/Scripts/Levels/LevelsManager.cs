@@ -11,7 +11,6 @@ public class LevelsManager : ScriptableObject
 
     public void GoTutorial()
     {
-        currentLevel = 0;
         SceneManager.LoadSceneAsync(levels[0].sceneIndex);
     }
 
@@ -36,10 +35,8 @@ public class LevelsManager : ScriptableObject
 
     public void GoToNextLevel()
     {
-        if (ChangeCurrentLevel(currentLevel + 1))
-        {
-            GoToCurrentLevel();
-        }
+        ChangeCurrentLevel(currentLevel + 1);
+        GoToCurrentLevel();
     }
 
     public void GoToLevel(int levelIndex)
