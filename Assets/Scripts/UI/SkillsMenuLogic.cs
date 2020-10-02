@@ -32,7 +32,7 @@ public class SkillsMenuLogic : MonoBehaviour
     {
         FillLevels();
         ActivateLevelIndicators();
-        CheckForUpgradePoints();
+        CheckForUpgradePoints(true);
     }
 
     private void OnDisable()
@@ -71,13 +71,18 @@ public class SkillsMenuLogic : MonoBehaviour
         }
     }
 
-    public void CheckForUpgradePoints()
+    public void CheckForUpgradePoints(bool onEnable)
     {
         SetAllButtons(ButtonType.Both, false);
         UpdateUpgradePointsText();
-        if (UpgradePoints.Value > 0)
+
+        if (onEnable)
         {
             SetAllButtons(ButtonType.UpgradeButton, true);
+        }
+        else
+        {
+            SetAllButtons(ButtonType.Both, true);
         }
     }
 
@@ -153,9 +158,11 @@ public class SkillsMenuLogic : MonoBehaviour
                 break;
         }
 
+        /*
         UpdateUpgradePointsText();
         SetAllButtons(ButtonType.UpgradeButton, true);
         MinusButtons[(int) skill].interactable = IsButtonShouldBeActive(ButtonType.MinusButton, skill);
+        */
     }
 
     private void SetSkillLevel(SkillType skill, int level)

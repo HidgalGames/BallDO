@@ -28,7 +28,7 @@ public class UpgradePointsObject : ScriptableObject
     {
         if (guiCoins)
         {
-            guiCoins.CheckForUpgradePoints();
+            guiCoins.CheckForUpgradePoints(false);
         }
     }
 }
