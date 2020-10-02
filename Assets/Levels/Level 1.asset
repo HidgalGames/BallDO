@@ -17,4 +17,4 @@ MonoBehaviour:
   unlocked: 1
   upgradeCoinsCount: 2
   defaultCoinsCount: 2
-  defaultLockState: 1
+  defaultUnlockState: 1

@@ -12,12 +12,12 @@ public class Level : ScriptableObject
 #if UNITY_EDITOR
     [Header("Defaults")]
     [Min(0)] public int defaultCoinsCount = 0;
-    public bool defaultLockState = false;
+    public bool defaultUnlockState = false;
 
     public void RestoreToDefaults()
     {
         rating = 0;
-        unlocked = defaultLockState;
+        unlocked = defaultUnlockState;
         upgradeCoinsCount = defaultCoinsCount;
     }
 #endif

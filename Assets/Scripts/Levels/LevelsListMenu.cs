@@ -34,7 +34,7 @@ public class LevelsListMenu : MonoBehaviour
 
         for(int i = 0; i < strings; i++)
         {
-            for(int j = 1; j < rows; j++)
+            for(int j = 1; j <= rows; j++)
             {
                 if(i + j >= lvlManager.levels.Count)
                 {
