@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu (menuName = "Levels Manager")]
 public class LevelsManager : ScriptableObject
 {
+    public FallsCount fc;
+
+    [Space]
     public List<Level> levels;
 
     [Min(0)] public int currentLevel = 1;
 
     public void GoTutorial()
     {
+        fc.Set(0);
         SceneManager.LoadSceneAsync(levels[0].sceneIndex);
     }
 
@@ -30,6 +34,7 @@ public class LevelsManager : ScriptableObject
 
     public void GoToCurrentLevel()
     {
+        fc.Set(0);
         SceneManager.LoadSceneAsync(levels[currentLevel].sceneIndex);
     }
 

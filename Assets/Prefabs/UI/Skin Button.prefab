@@ -379,6 +379,7 @@ MonoBehaviour:
   skinName: {fileID: 0}
   skinCost: {fileID: 0}
   choosedIndicator: {fileID: 0}
+  isChoosed: 0
 --- !u!1 &5784897648930932198
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -34.8}
+  m_AnchoredPosition: {x: 160, y: -34.8}
   m_SizeDelta: {x: 260, y: 228.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5784897648930932203
@@ -531,6 +532,7 @@ MonoBehaviour:
   skinName: {fileID: 5784897650687187143}
   skinCost: {fileID: 1360926189525332631}
   choosedIndicator: {fileID: 5784897649493121128}
+  isChoosed: 0
 --- !u!1 &5784897648975648734
 GameObject:
   m_ObjectHideFlags: 0

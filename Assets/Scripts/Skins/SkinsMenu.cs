@@ -32,8 +32,6 @@ public class SkinsMenu : MonoBehaviour
         for(int i = 0; i < skins.Length; i++)
         {
             SkinButton button = Instantiate(SkinButtonPrefab, listParentTransform).GetComponent<SkinButton>();
-            RectTransform buttonTrans = button.GetComponent<RectTransform>();
-            buttonTrans.anchoredPosition = new Vector2(160f + 290f * i, -20f);
             button.SetupButton(skins[i], i, this);
             buttons.Add(button);
         }

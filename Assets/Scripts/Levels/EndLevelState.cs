@@ -94,11 +94,11 @@ public class EndLevelState : MonoBehaviour
 
         float percent = (float) lvlPoints.LevelPoints / (float) (enemiesCount * 10);
 
-        if (percent >= 0.8f)
+        if (percent >= 0.85f)
         {
             rate = 5;
         }
-        else if (percent >= 0.5f)
+        else if (percent >= 0.6f)
         {
             rate = 4;
         }

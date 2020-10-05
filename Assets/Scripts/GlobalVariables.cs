@@ -13,6 +13,9 @@ public class GlobalVariables : ScriptableObject
     public bool restoreButton = false;
 #endif
 
+    [Header("Game Info")]
+    public string gameID = "3830149";
+
     [Header("Coins")]
     public Coins playerCoins;
     public DonateCoins playerDonatecoins;

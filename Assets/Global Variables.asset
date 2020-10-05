@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Global Variables
   m_EditorClassIdentifier: 
   restoreButton: 0
+  gameID: 3830149
   playerCoins: {fileID: 11400000, guid: cb3120bad79dfd24494c6efebc98dcef, type: 2}
   playerDonatecoins: {fileID: 11400000, guid: 04533e0cd2134fa45b3f0ee314b82ec2, type: 2}
   upgradeCoins: {fileID: 11400000, guid: 324ad2796c1a619488d59ff9e3cd0d68, type: 2}

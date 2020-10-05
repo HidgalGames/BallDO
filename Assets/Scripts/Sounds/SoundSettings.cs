@@ -42,7 +42,7 @@ public class SoundSettings : ScriptableObject
     {
         if (soundEnabled)
         {
-            mixer.audioMixer.SetFloat("SoundVolume", 0f);
+            mixer.audioMixer.SetFloat("SoundVolume", 6f);
         }
         else
         {

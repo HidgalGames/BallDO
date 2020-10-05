@@ -5,9 +5,10 @@ using TMPro;
 
 public class RewardedAdvertismenLogic : MonoBehaviour, IUnityAdsListener
 {
+    public GlobalVariables globalVars;
     public Coins playerCoins;
     public Button adsButton;
-    public string gameID = "3830149";
+    private string gameID;
     public string myPlacementId = "rewardedVideo";
     public bool testMode = false;
     public int coinsToAdd = 200;
@@ -15,9 +16,12 @@ public class RewardedAdvertismenLogic : MonoBehaviour, IUnityAdsListener
 
     public GameObject loadingIcon;
 
+    [Tooltip("Only for Endlvl Menu")] public TextMeshProUGUI coinsAddedText;
+
     private void Start()
     {
-        adsButton.interactable = false;
+        gameID = globalVars.gameID;
+
         coinsTooltip.text = coinsToAdd.ToString();
         
         if (Advertisement.isSupported)
@@ -30,6 +34,7 @@ public class RewardedAdvertismenLogic : MonoBehaviour, IUnityAdsListener
     public void OnEnable()
     {
         loadingIcon.SetActive(!Advertisement.IsReady(myPlacementId));
+        adsButton.interactable = Advertisement.IsReady(myPlacementId);
     }
 
     public void ShowRewardedAd()
@@ -73,6 +78,13 @@ public class RewardedAdvertismenLogic : MonoBehaviour, IUnityAdsListener
         if (showResult == ShowResult.Finished)
         {
             playerCoins.AddCoins(coinsToAdd);
+            if (coinsAddedText)
+            {
+                string temp = coinsAddedText.text.Remove(0, 1);
+                int count = int.Parse(temp);
+                count += coinsToAdd;
+                coinsAddedText.text = "+" + count.ToString();
+            }
         }
         else if (showResult == ShowResult.Skipped)
         {

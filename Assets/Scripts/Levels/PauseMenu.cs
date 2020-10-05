@@ -5,8 +5,6 @@ using TMPro;
 public class PauseMenu : MonoBehaviour
 {
     public SoundSettings soundSettings;
-    public Toggle soundToggle;
-    public Toggle musicToggle;
 
     [Space]
     public TextMeshProUGUI lvlNameText;
@@ -15,8 +13,6 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        soundToggle.isOn = !soundSettings.soundEnabled;
-        musicToggle.isOn = !soundSettings.musicEnabled;
         if(lvlManager.currentLevel > 0)
         {
             lvlNameText.text = "LVL " + lvlManager.currentLevel.ToString();
@@ -26,16 +22,6 @@ public class PauseMenu : MonoBehaviour
         {
             lvlNameText.text = "TUTORIAL";
         }
-    }
-
-    public void ToggleMusic()
-    {
-        soundSettings.ToggleMusic(!musicToggle.isOn);
-    }
-
-    public void ToggleSound()
-    {
-        soundSettings.ToggleSound(!soundToggle.isOn);
     }
 
     private void OnEnable()

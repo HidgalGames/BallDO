@@ -90,7 +90,7 @@ MonoBehaviour:
   joystick: {fileID: 0}
   maxSpeed: 15
   accelerationTime: 0.5
-  stoppingTime: 5
+  stoppingTime: 2
   currentSpeed: 0
   direction: {x: 0, y: 0, z: 0}
   JumpButton: {fileID: 0}

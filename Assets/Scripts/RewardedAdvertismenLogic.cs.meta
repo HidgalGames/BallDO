@@ -4,9 +4,11 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - globalVars: {fileID: 11400000, guid: d0780034dd64d394c8991bbde3b50893, type: 2}
   - playerCoins: {fileID: 11400000, guid: cb3120bad79dfd24494c6efebc98dcef, type: 2}
   - adsButton: {instanceID: 0}
   - coinsTooltip: {instanceID: 0}
+  - loadingIcon: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
