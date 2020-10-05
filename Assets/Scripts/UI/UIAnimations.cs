@@ -10,6 +10,15 @@ public class UIAnimations : MonoBehaviour
     private void Awake()
     {
         UC.SetupAnimController(this);
+    }
+
+    private void OnEnable()
+    {
+        UpdateAnimations();
+    }
+
+    public void UpdateAnimations()
+    {
         SetSkillsButtonAnimation(UC.Value > 0);
     }
 

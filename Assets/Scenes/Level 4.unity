@@ -1677,7 +1677,7 @@ PrefabInstance:
     - target: {fileID: 411654366964828744, guid: 2de2f86d40fa6cb43838a9a8cf8cc1d5,
         type: 3}
       propertyPath: enemiesCount
-      value: 1
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 411654366964828744, guid: 2de2f86d40fa6cb43838a9a8cf8cc1d5,
         type: 3}
@@ -3728,7 +3728,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.12034784, y: 0.00000002562198, z: -0.000000003106126, w: 0.9927318}
+  m_LocalRotation: {x: 0.12034784, y: -0.00000002562198, z: 0.000000003106126, w: 0.9927318}
   m_LocalPosition: {x: 0.17000759, y: 3.6679997, z: -13.719999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4918,8 +4918,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106673998}
-  m_LocalRotation: {x: 0.120347835, y: 0.000000012810989, z: -0.0000000015530626,
-    w: 0.9927318}
+  m_LocalRotation: {x: 0.120347835, y: -0.000000012810992, z: 0.000000001553063, w: 0.9927318}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

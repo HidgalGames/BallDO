@@ -17,6 +17,9 @@ public class EndLevelState : MonoBehaviour
     public int enemiesCount = 0;
 
     [Space]
+    public int coinsForEachStar = 50;
+
+    [Space]
     public ParticleSystem[] endLevelPatricles;
 
     [Space]
@@ -134,8 +137,8 @@ public class EndLevelState : MonoBehaviour
 
             if (delta >= 0)
             {
-                playerCoins.AddCoins(delta * 100);
-                EndLvlMenu.SetCoins(delta * 100);
+                playerCoins.AddCoins(delta * coinsForEachStar);
+                EndLvlMenu.SetCoins(delta * coinsForEachStar);
             }
         }
         else

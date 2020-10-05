@@ -272,7 +272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: for each star you will receive 100 coins
+  m_text: for each star you will receive 50 coins
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 493edfb5190d7c140be633069c240fc1, type: 2}
   m_sharedMaterial: {fileID: -3717426578622121188, guid: 493edfb5190d7c140be633069c240fc1,
@@ -493,8 +493,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16238090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000000059605, y: 0.001, z: 7.128}
-  m_LocalScale: {x: 3.8441856, y: 1, z: 30.27471}
+  m_LocalPosition: {x: 0.000000059605, y: 0.001, z: 5.734}
+  m_LocalScale: {x: 3.8441856, y: 1, z: 6.416589}
   m_Children: []
   m_Father: {fileID: 1055158018}
   m_RootOrder: 12
@@ -7896,8 +7896,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039937498}
-  m_LocalRotation: {x: 0.102318436, y: -0.000000012986731, z: 0.0000000013357926,
-    w: 0.9947517}
+  m_LocalRotation: {x: 0.10231843, y: 0.000000001966038, z: -2.0222318e-10, w: 0.9947517}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13406,7 +13405,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.12034784, y: -0.00000002562198, z: 0.000000003106126, w: 0.9927318}
+  m_LocalRotation: {x: 0.12034784, y: 0.00000002562198, z: -0.000000003106126, w: 0.9927318}
   m_LocalPosition: {x: 0.17000759, y: 3.6679997, z: -13.719999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -16610,7 +16609,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106673998}
-  m_LocalRotation: {x: 0.120347835, y: -0.000000012810992, z: 0.000000001553063, w: 0.9927318}
+  m_LocalRotation: {x: 0.120347835, y: 0.000000012810989, z: -0.0000000015530626,
+    w: 0.9927318}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

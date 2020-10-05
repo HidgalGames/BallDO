@@ -4,7 +4,6 @@ public class PlayerController : MonoBehaviour
 {
 
     private AudioSource aSource;
-    public Transform camTransform;
     public GameObject explosionRadius;
 
     [Space]
@@ -21,8 +20,8 @@ public class PlayerController : MonoBehaviour
     [Space]
     public ParticleSystem shootParticles;
     public ShootData shootData;
-    public bool isShooting = false;
-    public float shootingTimer = 0f;
+    private bool isShooting = false;
+    private float shootingTimer = 0f;
 
     private PlayerMovement movementController;
     private Rigidbody rigid;

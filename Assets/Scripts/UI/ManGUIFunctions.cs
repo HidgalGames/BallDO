@@ -26,7 +26,7 @@ public class ManGUIFunctions : MonoBehaviour
     private TextMeshProUGUI donateCoinsText;
     public DonateCoins donateCoins;
 
-    private void Start()
+    private void Awake()
     {
         SetupCoinsObjects();
 

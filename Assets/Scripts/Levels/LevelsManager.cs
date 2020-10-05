@@ -10,12 +10,17 @@ public class LevelsManager : ScriptableObject
     [Space]
     public List<Level> levels;
 
-    [Min(0)] public int currentLevel = 1;
+    [Min(0)] public int currentLevel = 0;
 
     public void GoTutorial()
     {
         fc.Set(0);
         SceneManager.LoadSceneAsync(levels[0].sceneIndex);
+    }
+
+    public void TutorialDenied()
+    {
+        ChangeCurrentLevel(1);
     }
 
     public bool ChangeCurrentLevel(int levelIndex)
@@ -73,7 +78,7 @@ public class LevelsManager : ScriptableObject
 #if UNITY_EDITOR
     public void RestoreLevelsToDefault()
     {
-        currentLevel = 1;
+        currentLevel = 0;
 
         foreach (Level lvl in levels)
         {
