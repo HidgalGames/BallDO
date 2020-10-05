@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa7b26d7ffd10b40979e93de9d1a932, type: 3}
   m_Name: Coins
   m_EditorClassIdentifier: 
-  TotalCoins: 0
+  TotalCoins: 150
