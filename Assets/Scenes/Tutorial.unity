@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.016
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.44520125, g: 0.7156938, b: 0.913099, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1.1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.13296545, g: 0.19145328, b: 0.33962262, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.56507057, g: 0.6357354, b: 0.7230542, a: 1}
+  m_IndirectSpecularColor: {r: 0.37370944, g: 0.68753475, b: 1.3420542, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8551,7 +8551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinPrefab: {fileID: 3299224050223671276, guid: 6ffd02d5630334c4aa97444972f4d56f,
     type: 3}
-  CurrentLevel: {fileID: 11400000, guid: 62a5ff725187b0d48bd48a988fc5b46e, type: 2}
+  lvlManager: {fileID: 11400000, guid: 648ff69b3085a3644a8891f976b1a7f7, type: 2}
   CoinPositions:
   - {fileID: 39156526}
 --- !u!1001 &1103029331
@@ -14141,8 +14141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundSettings: {fileID: 11400000, guid: af56fcfd2ba736340a4d876a4e0cc482, type: 2}
-  soundToggle: {fileID: 0}
-  musicToggle: {fileID: 0}
   lvlNameText: {fileID: 5090211990157106247}
   highscoreText: {fileID: 9047176540291053662}
   lvlManager: {fileID: 11400000, guid: 648ff69b3085a3644a8891f976b1a7f7, type: 2}

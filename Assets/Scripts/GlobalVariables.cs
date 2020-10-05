@@ -15,6 +15,7 @@ public class GlobalVariables : ScriptableObject
 
     [Header("Game Info")]
     public string gameID = "3830149";
+    public FallsCount fallsCount;
 
     [Header("Coins")]
     public Coins playerCoins;
@@ -101,6 +102,8 @@ public class GlobalVariables : ScriptableObject
         soundSettings.RestoreToDefaults();
 
         firstStart = true;
+
+        fallsCount.Restore();
 
         Debug.Log("Restored to defaults");
     }

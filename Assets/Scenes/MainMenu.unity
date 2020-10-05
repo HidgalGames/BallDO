@@ -6249,6 +6249,7 @@ GameObject:
   - component: {fileID: 637574854}
   - component: {fileID: 637574853}
   - component: {fileID: 637574857}
+  - component: {fileID: 637574858}
   m_Layer: 5
   m_Name: Main GUI
   m_TagString: Untagged
@@ -6370,6 +6371,20 @@ MonoBehaviour:
   playerCoins: {fileID: 11400000, guid: cb3120bad79dfd24494c6efebc98dcef, type: 2}
   donateCoinsObject: {fileID: 577292713}
   donateCoins: {fileID: 11400000, guid: 04533e0cd2134fa45b3f0ee314b82ec2, type: 2}
+--- !u!114 &637574858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637574852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66b1819195814f48bef24f88a9c3140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillsBtnAnimator: {fileID: 2044159909}
+  UC: {fileID: 11400000, guid: 324ad2796c1a619488d59ff9e3cd0d68, type: 2}
 --- !u!1 &655578508
 GameObject:
   m_ObjectHideFlags: 0
@@ -8604,7 +8619,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1532008508}
   m_HandleRect: {fileID: 1532008507}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15195,8 +15210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 297.525}
-  m_SizeDelta: {x: 1036, y: 595.05}
+  m_AnchoredPosition: {x: 0, y: 282}
+  m_SizeDelta: {x: 1036, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415725557
 MonoBehaviour:
@@ -18191,7 +18206,7 @@ RectTransform:
   m_Father: {fileID: 1412360576}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.077934444}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -19409,8 +19424,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1701392264}
   m_HandleRect: {fileID: 1701392263}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.92206556
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -22091,6 +22106,7 @@ GameObject:
   - component: {fileID: 2044159908}
   - component: {fileID: 2044159907}
   - component: {fileID: 2044159906}
+  - component: {fileID: 2044159909}
   m_Layer: 5
   m_Name: Skills Button
   m_TagString: Untagged
@@ -22219,6 +22235,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044159904}
   m_CullTransparentMesh: 0
+--- !u!95 &2044159909
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044159904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 110c44f995f53ba4f83d4130166200a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2061620986
 GameObject:
   m_ObjectHideFlags: 0
@@ -22454,6 +22489,7 @@ GameObject:
   - component: {fileID: 2105901599}
   - component: {fileID: 2105901598}
   - component: {fileID: 2105901597}
+  - component: {fileID: 2105901600}
   m_Layer: 5
   m_Name: Skins Button
   m_TagString: Untagged
@@ -22582,6 +22618,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105901595}
   m_CullTransparentMesh: 0
+--- !u!95 &2105901600
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105901595}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b941e0b6cf98b204983eddbbfc9155f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2109651777
 GameObject:
   m_ObjectHideFlags: 0

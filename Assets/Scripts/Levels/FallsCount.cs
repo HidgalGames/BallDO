@@ -19,4 +19,11 @@ public class FallsCount : ScriptableObject
     {
         fallsCount++;
     }
+
+#if UNITY_EDITOR
+    public void Restore()
+    {
+        fallsCount = 0;
+    }
+#endif
 }
