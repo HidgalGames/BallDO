@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef2212399e2149c42af30ab9f6f7f6af, type: 3}
-  m_Name: Bomb Skin
+  m_Name: Volleyball Skin
   m_EditorClassIdentifier: 
-  skinName: Bomb
-  skinObject: {fileID: 6988712906219327404, guid: 1ff2e59244666194cbff45749d6ae301,
+  skinName: Volleyball
+  skinObject: {fileID: -927199367670048503, guid: 1abaed4f71e0d0f49b1c639a3d7969af,
     type: 3}
-  skinIcon: {fileID: 21300000, guid: 685db2bb0d234d7449efb932d1df3990, type: 3}
-  joyIcon: {fileID: 21300000, guid: 16c1444882499f44d8732fb0a3793585, type: 3}
-  locked: 1
-  cost: 1500
+  skinIcon: {fileID: 21300000, guid: 66359f214f30f944488d91282c4e7835, type: 3}
+  joyIcon: {fileID: 21300000, guid: 0a9ad38b19429d143bf4fc20e1c987a8, type: 3}
+  locked: 0
+  cost: 1250
   defaultLockState: 1

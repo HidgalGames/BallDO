@@ -64,7 +64,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df193579b9feb2f4a8136c57a8ebd7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camTransform: {fileID: 0}
   explosionRadius: {fileID: 3592288569954009214}
   shootSound: {fileID: 8300000, guid: a238769ce63632141bcbf83dda3b93f7, type: 3}
   explodeSound: {fileID: 8300000, guid: 9a5baef16508c6d49af0919f66778b5e, type: 3}
@@ -73,8 +72,6 @@ MonoBehaviour:
   explosionData: {fileID: 11400000, guid: f99e8e81e693b39408bc8875a31544c4, type: 2}
   shootParticles: {fileID: 0}
   shootData: {fileID: 11400000, guid: 874c3db92ffd50d48ae7b10dc5134b59, type: 2}
-  isShooting: 0
-  shootingTimer: 0
 --- !u!114 &3613474431337154901
 MonoBehaviour:
   m_ObjectHideFlags: 0
