@@ -9,6 +9,12 @@ public class SkinSystem : MonoBehaviour
 
     private void Start()
     {
+        GameObject joy = GameObject.Find("Handle");
+        if (joy)
+        {
+            joystick = joy.GetComponent<Image>();
+        }
+        
         ChangeSkin(skinsList.currentSkin);
     }
 
@@ -25,7 +31,7 @@ public class SkinSystem : MonoBehaviour
 
             Instantiate(curSkin.skinObject, SkinParent);
 
-            if(joystick != null)
+            if(joystick)
             {
                 joystick.sprite = curSkin.joyIcon;
             }
