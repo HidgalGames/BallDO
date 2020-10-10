@@ -31,7 +31,9 @@ public class FalloutTrigger : MonoBehaviour, IUnityAdsListener
         {
             if (!tutorial)
             {
+
                 fc.Add();
+                /*
                 if(fc.Get() == 3)
                 {
                     fc.Set(0);
@@ -44,6 +46,7 @@ public class FalloutTrigger : MonoBehaviour, IUnityAdsListener
                         Debug.Log("Rewarded video is not ready at the moment! Please try again later!");
                     }
                 }
+                */
 
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);                
             }

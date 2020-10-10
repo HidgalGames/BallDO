@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef2212399e2149c42af30ab9f6f7f6af, type: 3}
-  m_Name: Bowling Skin
+  m_Name: Soccer Skin
   m_EditorClassIdentifier: 
-  skinName: Bowling
-  skinObject: {fileID: 6988712906219327404, guid: 555bbe8571e9ec74ba8f964f63295b7c,
+  skinName: Soccer
+  skinObject: {fileID: -927199367670048503, guid: ce617e2a9ac5e3a4d8a6eeebd60fbf64,
     type: 3}
-  skinIcon: {fileID: 21300000, guid: 34c56b47ec1bfaf45a4cc87be32db958, type: 3}
-  joyIcon: {fileID: 21300000, guid: e518ef72583ada743bdeaf1ac1ee12d8, type: 3}
-  locked: 0
-  cost: 1000
+  skinIcon: {fileID: 21300000, guid: 6cc3c9f347ea3d541af4fac127267c30, type: 3}
+  joyIcon: {fileID: 21300000, guid: 73cc90929c8b7874198c051da844529c, type: 3}
+  locked: 1
+  cost: 1250
   defaultLockState: 1

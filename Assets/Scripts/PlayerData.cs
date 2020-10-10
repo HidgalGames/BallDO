@@ -63,9 +63,9 @@ public class PlayerData
         sTimeout = variables.shData.shootTimeout;
 
         currentSkin = variables.skins.currentSkin;
-        Skin[] skins = variables.skins.playerSkins;
-        skinsLockStats = new int[skins.Length, 1];
-        for (int i = 0; i < skins.Length; i++)
+        List<Skin> skins = variables.skins.playerSkins;
+        skinsLockStats = new int[skins.Count, 1];
+        for (int i = 0; i < skins.Count; i++)
         {
             if (skins[i].locked)
             {

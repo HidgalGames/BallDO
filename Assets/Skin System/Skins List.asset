@@ -18,4 +18,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 962e5e29ef0d706429e752c237ea6bfb, type: 2}
   - {fileID: 11400000, guid: f0719f42921665f4ca6a50542eb2a5eb, type: 2}
   - {fileID: 11400000, guid: d690ea582698ecf4aa0aee3b06ff3389, type: 2}
-  currentSkin: 0
+  currentSkin: 5

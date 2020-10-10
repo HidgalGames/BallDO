@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2212399e2149c42af30ab9f6f7f6af, type: 3}
+  m_Name: Coolguy Skin
+  m_EditorClassIdentifier: 
+  skinName: Coolguy
+  skinObject: {fileID: -927199367670048503, guid: 305e23cdd12deba45934351e933f712c,
+    type: 3}
+  skinIcon: {fileID: 21300000, guid: 2fc6b54af801b0546bd35dd01e59d2b6, type: 3}
+  joyIcon: {fileID: 21300000, guid: ecd16cccc82f90046a1936a274e35e03, type: 3}
+  locked: 0
+  cost: 1450
+  defaultLockState: 1

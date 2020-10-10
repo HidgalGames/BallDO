@@ -24,12 +24,12 @@ public class SkinsMenu : MonoBehaviour
 
     private void FillSkinsMenu()
     {
-        Skin[] skins = skinSystem.skinsList.playerSkins;
+        List<Skin> skins = skinSystem.skinsList.playerSkins;
 
         RectTransform parentRect = listParentTransform.GetComponent<RectTransform>();
-        parentRect.sizeDelta = new Vector2(290 * skins.Length, parentRect.sizeDelta.y);
+        parentRect.sizeDelta = new Vector2(290 * skins.Count, parentRect.sizeDelta.y);
 
-        for(int i = 0; i < skins.Length; i++)
+        for(int i = 0; i < skins.Count; i++)
         {
             SkinButton button = Instantiate(SkinButtonPrefab, listParentTransform).GetComponent<SkinButton>();
             button.SetupButton(skins[i], i, this);
@@ -40,7 +40,7 @@ public class SkinsMenu : MonoBehaviour
     public bool BuySkin(int skinNumber)
     {
         Skin curSkin;
-        if (skinNumber < skinSystem.skinsList.playerSkins.Length)
+        if (skinNumber < skinSystem.skinsList.playerSkins.Count)
         {
             curSkin = skinSystem.skinsList.playerSkins[skinNumber];
             if (playerCoins.TakeCoins(curSkin.cost))
