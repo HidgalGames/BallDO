@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f602811a55bc7bf49bed0d9c7c379882, type: 3}
   m_Name: Skins List
   m_EditorClassIdentifier: 
+  restoreButton: 0
   playerSkins:
   - {fileID: 11400000, guid: 9e5c992cfd2fa7241ba828a722fc6a07, type: 2}
   - {fileID: 11400000, guid: f3a5e3c5d2dae6243965f72960496100, type: 2}
   - {fileID: 11400000, guid: 962e5e29ef0d706429e752c237ea6bfb, type: 2}
+  - {fileID: 11400000, guid: b15cb4b34616c944f87f9c6d64a5c57e, type: 2}
+  - {fileID: 11400000, guid: e3358188e384aa147a7e7b2d24456fd2, type: 2}
+  - {fileID: 11400000, guid: d854f03263712174292eb0b5fc780e53, type: 2}
+  - {fileID: 11400000, guid: 551ba38cd67bcc64d88f2ff7c265b839, type: 2}
   - {fileID: 11400000, guid: f0719f42921665f4ca6a50542eb2a5eb, type: 2}
   - {fileID: 11400000, guid: d690ea582698ecf4aa0aee3b06ff3389, type: 2}
-  currentSkin: 5
+  - {fileID: 11400000, guid: 5a72079b0126d514096e40db23fe006f, type: 2}
+  currentSkin: 0

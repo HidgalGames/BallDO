@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 #if UNITY_EDITOR
 using UnityEditor;
-using System.IO;
 using BasicTools.ButtonInspector;
 #endif
 
@@ -49,7 +48,9 @@ public class SkinsList : ScriptableObject
     {
         Skin newSkin = Editor.CreateInstance<Skin>();
 
-        NewSkinWindow.ShowWindow(newSkin, ref playerSkins); 
+        NewSkinWindow.ShowWindow(newSkin, ref playerSkins);
+
+        EditorUtility.SetDirty(this);
     }
 #endif
 }

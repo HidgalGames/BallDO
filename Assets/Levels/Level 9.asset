@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rating: 0
   sceneIndex: Level 9
-  unlocked: 0
+  unlocked: 1
   upgradeCoinsCount: 1
   defaultCoinsCount: 1
   defaultUnlockState: 0
