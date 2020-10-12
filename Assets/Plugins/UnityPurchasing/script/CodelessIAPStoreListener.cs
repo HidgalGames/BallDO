@@ -37,7 +37,18 @@ namespace UnityEngine.Purchasing
             StandardPurchasingModule module = StandardPurchasingModule.Instance();
             module.useFakeStoreUIMode = FakeStoreUIMode.StandardUser;
 
-            ConfigurationBuilder builder = ConfigurationBuilder.Instance(module);
+            //ConfigurationBuilder builder = ConfigurationBuilder.Instance(module);
+
+            ConfigurationBuilder builder;
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                builder = ConfigurationBuilder.Instance(
+                    Google.Play.Billing.GooglePlayStoreModule.Instance());
+            }
+            else
+            {
+                builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
+            }
 
             IAPConfigurationHelper.PopulateConfigurationBuilder(ref builder, instance.catalog);
 

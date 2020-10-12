@@ -98,6 +98,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Default Skin
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: de16ce0202f9a9f40a2ae5283faef9ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de16ce0202f9a9f40a2ae5283faef9ff, type: 3}
 --- !u!4 &5990303118222776505 stripped

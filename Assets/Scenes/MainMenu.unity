@@ -1583,7 +1583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 249.3378, y: -35}
+  m_AnchoredPosition: {x: 249.19751, y: -35}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &104032108
@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 100dc
+  productId: com.hidgalgames.balldo.100dc
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2195,7 +2195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 283.6413, y: -35}
+  m_AnchoredPosition: {x: 283.46463, y: -35}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &164221282
@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 500dc
+  productId: com.hidgalgames.balldo.500dc
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -2594,7 +2594,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 364.6, y: -238.97336}
-  m_SizeDelta: {x: 353.6413, y: 70}
+  m_SizeDelta: {x: 353.46463, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181647762
 MonoBehaviour:
@@ -4250,7 +4250,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 193.33, y: -35}
-  m_SizeDelta: {x: 90.31128, y: 65}
+  m_SizeDelta: {x: 90.13463, y: 65}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &379085461
 GameObject:
@@ -9711,7 +9711,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 177.62001, y: -35}
-  m_SizeDelta: {x: 71.71778, y: 65}
+  m_SizeDelta: {x: 71.5775, y: 65}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &890532207
 GameObject:
@@ -9951,7 +9951,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 160.48, y: -35}
-  m_SizeDelta: {x: 54.452385, y: 65}
+  m_SizeDelta: {x: 54.34588, y: 65}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &902865548
 MonoBehaviour:
@@ -17402,7 +17402,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 364.6, y: -152.05002}
-  m_SizeDelta: {x: 319.3378, y: 70}
+  m_SizeDelta: {x: 319.1975, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1598385565
 MonoBehaviour:
@@ -18987,7 +18987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -19119,7 +19119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 214.93237, y: -35}
+  m_AnchoredPosition: {x: 214.82587, y: -35}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1707741340
@@ -19213,7 +19213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 20dc
+  productId: com.hidgalgames.balldo.20dc
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -19672,7 +19672,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 364.6, y: -65.12667}
-  m_SizeDelta: {x: 284.93237, y: 70}
+  m_SizeDelta: {x: 284.82587, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732908687
 MonoBehaviour:

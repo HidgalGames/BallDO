@@ -27,6 +27,13 @@ public class LevelButton : MonoBehaviour
         sManager = Camera.main.gameObject.GetComponent<SoundManager>();
     }
 
+    public void SetNewLevelsSoonButton()
+    {
+        buttonName.text = "New Levels Soon";
+        lvlRatingText.text = string.Empty;
+        UCIndicator.SetActive(false);
+    }
+
     public void SetupButton(int lvlNumber, int lvlRating, bool unlocked, int UCCount, LevelsManager lvlMng)
     {
         SetupLvlManager(lvlMng);
@@ -39,7 +46,15 @@ public class LevelButton : MonoBehaviour
             UnlockButton();
         }
 
-        buttonName.text = "LVL " + lvlNumber.ToString();
+        if(lvlNumber > 0)
+        {
+            buttonName.text = "LVL " + lvlNumber.ToString();
+        }
+        else
+        {
+            buttonName.text = "TUTORIAL";
+        }
+
         lvlRatingText.text = string.Empty;
         DrawRating();
 

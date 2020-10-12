@@ -12,6 +12,9 @@ public class LevelsListMenu : MonoBehaviour
     [Space]
     public List<LevelButton> buttons = new List<LevelButton>();
 
+    private float stringSize = 250f;
+    private int rows = 3;
+
     private void Start()
     {
         FillMenuList();
@@ -24,26 +27,27 @@ public class LevelsListMenu : MonoBehaviour
 
     private void FillMenuList()
     {
-        int rows = 3;
-        int strings = Mathf.CeilToInt((float)(lvlManager.levels.Count - 1) / (float) rows);
-
+        int strings = Mathf.CeilToInt((float)(lvlManager.levels.Count) / (float) rows);
         RectTransform parentRect = parentObject.GetComponent<RectTransform>();
-        parentRect.sizeDelta = new Vector2(parentRect.sizeDelta.x, 250 * strings);
+        parentRect.sizeDelta = new Vector2(parentRect.sizeDelta.x, stringSize * strings);
 
-        for(int i = 0; i < strings; i++)
+        int i = 0;
+        for (; i < lvlManager.levels.Count; i++)
         {
-            for(int j = 0; j < rows; j++)
-            {
-                if(i * rows + j + 1 >= lvlManager.levels.Count)
-                {
-                    return;
-                }
-
-                GameObject bgo = Instantiate(levelButtonPrefab, parentObject);
-                LevelButton button = bgo.GetComponent<LevelButton>();
-                button.SetupButton(i * rows + j + 1, lvlManager.levels[i * rows + j + 1].rating, lvlManager.levels[i * rows + j + 1].unlocked, lvlManager.levels[i * rows + j + 1].upgradeCoinsCount, lvlManager);
-                buttons.Add(button);
-            }
+            GameObject bgo = Instantiate(levelButtonPrefab, parentObject);
+            LevelButton button = bgo.GetComponent<LevelButton>();
+            button.SetupButton(i, lvlManager.levels[i].rating, lvlManager.levels[i].unlocked, lvlManager.levels[i].upgradeCoinsCount, lvlManager);
+            buttons.Add(button);
         }
+
+        if(i % rows == 0)
+        {
+            parentRect.sizeDelta = new Vector2(parentRect.sizeDelta.x, stringSize * (strings + 1));
+        }
+
+        GameObject bgob = Instantiate(levelButtonPrefab, parentObject);
+        LevelButton buttonn = bgob.GetComponent<LevelButton>();
+        buttonn.SetNewLevelsSoonButton();
+
     }
 }
